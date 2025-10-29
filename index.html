@@ -11,6 +11,13 @@
     .container{max-width:1120px;margin:auto;padding:16px}
     header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border);z-index:10}
     h1{font-size:22px;margin:0}
+    .header-bar{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:14px 16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:44px;width:auto}
+    .brand-text{display:flex;flex-direction:column;gap:2px}
+    .brand-text span{font-size:12px;color:var(--muted)}
+    .brand-text strong{font-size:15px;color:var(--fg)}
+    .brand-text .overline{text-transform:uppercase;letter-spacing:.08em;font-weight:600}
     .stats{display:flex;gap:8px}
     .stat{border:1px solid var(--border);border-radius:12px;padding:10px 12px}
     .stat .label{font-size:12px;color:var(--muted)}
@@ -24,12 +31,20 @@
     .job{background:var(--card);border:1px solid var(--border);border-radius:16px}
     .job button{all:unset;display:block;width:100%;padding:18px;border-radius:16px;cursor:pointer}
     .job:hover{box-shadow:0 4px 18px rgba(0,0,0,.05)}
-    .row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+    .job .details{flex:1 1 240px;min-width:0}
     .title{font-size:18px;font-weight:600}
     .meta{margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:14px}
+    .job .cta{display:flex;align-items:center;gap:10px;font-size:13px;flex:0 0 auto;white-space:nowrap;margin-left:auto}
+    .job .cta span[aria-hidden]{font-size:18px;line-height:1}
+    @media(max-width:600px){
+      .brand img{height:36px}
+    }
     .chip{background:#f3f4f6;border-radius:999px;padding:4px 10px;font-size:12px}
     .apply-pill{background:#ecfeff;color:#115e59;border:1px solid #99f6e4;border-radius:999px;padding:4px 10px;font-size:12px}
     footer{border-top:1px solid var(--border);background:#fff}
+    .footer-bar{display:flex;align-items:center;gap:12px;padding:18px 16px;font-size:14px;color:var(--muted);flex-wrap:wrap}
+    .footer-bar img{height:36px;width:auto}
     /* Dialog */
     .overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;z-index:40}
     .dialog{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(820px,92vw);max-height:85vh;overflow:auto;background:#fff;border-radius:20px;border:1px solid var(--border);padding:22px;display:none;z-index:50}
@@ -52,8 +67,14 @@
 </head>
 <body>
   <header>
-    <div class="container" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 16px">
-      <h1>Careers at Island Computing Services</h1>
+    <div class="container header-bar">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Island Computing Services logo" />
+        <div class="brand-text">
+          <span class="overline">Careers at</span>
+          <h1>Island Computing Services</h1>
+        </div>
+      </div>
       <div class="stats">
         <div class="stat"><div class="label">Open roles</div><div id="stat-open" class="value">0</div></div>
         <div class="stat"><div class="label">Locations</div><div id="stat-loc" class="value">0</div></div>
@@ -97,7 +118,13 @@
   </section>
 
   <footer>
-    <div class="container" style="padding:18px 16px;font-size:14px;color:var(--muted)">Island Computing Services • A sovereign Indian cloud</div>
+    <div class="container footer-bar">
+      <img src="assets/logo.svg" alt="Island Computing Services logo" />
+      <div class="brand-text">
+        <strong>Island Computing Services</strong>
+        <span>A sovereign Indian cloud</span>
+      </div>
+    </div>
   </footer>
 
 <script>
@@ -192,7 +219,7 @@ function renderJobs(){
     <li class="job">
       <button aria-haspopup="dialog" aria-controls="dialog" data-id="${job.id}">
         <div class="row">
-          <div>
+          <div class="details">
             <div class="title">${job.title}</div>
             <div class="meta">
               <span>${job.team}</span><span>•</span>
@@ -200,7 +227,7 @@ function renderJobs(){
               <span>${job.type}</span>${job.level?`<span>•</span><span>${job.level}</span>`:""}
             </div>
           </div>
-          <div style="display:flex;gap:8px;align-items:center">
+          <div class="cta">
             <span class="apply-pill">Apply</span>
             <span aria-hidden>›</span>
           </div>
