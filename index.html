@@ -1,1 +1,319 @@
-Hello
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers • Island Computing Services</title>
+  <style>
+    :root{--bg:#f6f6f7;--fg:#0f172a;--muted:#6b7280;--brand:#0ea5a4;--card:#ffffff;--border:#e5e7eb}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+    a{color:inherit}
+    .container{max-width:1120px;margin:auto;padding:16px}
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border);z-index:10}
+    h1{font-size:22px;margin:0}
+    .stats{display:flex;gap:8px}
+    .stat{border:1px solid var(--border);border-radius:12px;padding:10px 12px}
+    .stat .label{font-size:12px;color:var(--muted)}
+    .stat .value{font-size:16px;font-weight:600}
+    .grid{display:grid;gap:12px}
+    @media(min-width:900px){.filters{grid-template-columns:2fr 1fr 1fr 1fr}}
+    input[type="text"], select{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:12px;outline:none}
+    input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px rgba(14,165,164,.25)}
+    .muted{color:var(--muted);font-size:14px}
+    ul.jobs{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+    .job{background:var(--card);border:1px solid var(--border);border-radius:16px}
+    .job button{all:unset;display:block;width:100%;padding:18px;border-radius:16px;cursor:pointer}
+    .job:hover{box-shadow:0 4px 18px rgba(0,0,0,.05)}
+    .row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .title{font-size:18px;font-weight:600}
+    .meta{margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:14px}
+    .chip{background:#f3f4f6;border-radius:999px;padding:4px 10px;font-size:12px}
+    .apply-pill{background:#ecfeff;color:#115e59;border:1px solid #99f6e4;border-radius:999px;padding:4px 10px;font-size:12px}
+    footer{border-top:1px solid var(--border);background:#fff}
+    /* Dialog */
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;z-index:40}
+    .dialog{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(820px,92vw);max-height:85vh;overflow:auto;background:#fff;border-radius:20px;border:1px solid var(--border);padding:22px;display:none;z-index:50}
+    .dialog.open,.overlay.open{display:block}
+    .dialog h3{margin:0;font-size:20px;font-weight:600}
+    .dialog .close{border:0;background:transparent;cursor:pointer;border-radius:8px;padding:6px}
+    .section{margin-top:14px}
+    .bullets{padding-left:20px}
+    .bullets li{margin:6px 0}
+    /* Form */
+    .form-row{display:grid;gap:12px}
+    @media(min-width:760px){.form-row{grid-template-columns:1fr 1fr}}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid var(--border);cursor:pointer}
+    .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .btn.primary:hover{filter:brightness(.95)}
+    .btn:disabled{opacity:.6;cursor:not-allowed}
+    textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:12px}
+    .note{font-size:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 16px">
+      <h1>Careers at Island Computing Services</h1>
+      <div class="stats">
+        <div class="stat"><div class="label">Open roles</div><div id="stat-open" class="value">0</div></div>
+        <div class="stat"><div class="label">Locations</div><div id="stat-loc" class="value">0</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:18px 16px 56px">
+    <!-- Filters -->
+    <section class="filters grid">
+      <div>
+        <label class="sr-only" for="q">Search</label>
+        <input id="q" type="text" placeholder="Search by title, team, location, skills" />
+      </div>
+      <div>
+        <label class="muted" for="loc">Location</label>
+        <select id="loc"></select>
+      </div>
+      <div>
+        <label class="muted" for="team">Team</label>
+        <select id="team"></select>
+      </div>
+      <div>
+        <label class="muted" for="type">Type</label>
+        <select id="type"></select>
+      </div>
+      <p id="matchCount" class="muted" style="grid-column:1/-1">0 matching roles</p>
+    </section>
+
+    <!-- Jobs list -->
+    <ul id="jobs" class="jobs"></ul>
+  </main>
+
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+  <section id="dialog" class="dialog" role="dialog" aria-modal="true" aria-labelledby="dlg-title">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <h3 id="dlg-title">Job</h3>
+      <button id="dlg-close" class="close" aria-label="Close">✕</button>
+    </div>
+    <div id="dlg-body" class="section"></div>
+  </section>
+
+  <footer>
+    <div class="container" style="padding:18px 16px;font-size:14px;color:var(--muted)">Island Computing Services • A sovereign Indian cloud</div>
+  </footer>
+
+<script>
+// ---------- Data ----------
+const JOBS = [
+  {
+    id: "sde-senior-plat-001",
+    title: "Senior Software Development Engineer",
+    team: "Platform • Distributed Systems",
+    location: "Bengaluru, India",
+    type: "Full‑time",
+    level: "Senior",
+    tags: ["Go", "Rust", "Kubernetes", "PostgreSQL", "Kafka"],
+    applyUrl: "",
+    description:
+      "You will help design and build core systems for a sovereign Indian cloud: control planes, data planes, orchestration, and high‑availability services.",
+    responsibilities: [
+      "Design, implement, and operate distributed services with SLOs",
+      "Own end‑to‑end lifecycle: design docs, reviews, coding, on‑call",
+      "Drive reliability, observability, and cost‑performance",
+      "Mentor engineers and raise the engineering bar",
+    ],
+    requirements: [
+      "5+ years building backend/distributed systems",
+      "Strong in one systems language (Go/Rust/C++)",
+      "Deep knowledge of data structures, networking, concurrency",
+      "Experience with Kubernetes or similar orchestration",
+    ],
+    niceToHave: [
+      "Experience with control plane design",
+      "Prior startup or cloud provider experience",
+      "Infra as code and SRE practices",
+    ],
+  },
+  {
+    id: "pm-infra-002",
+    title: "Product Manager, Cloud Foundations",
+    team: "Product • Core Platform",
+    location: "Bengaluru, India",
+    type: "Full‑time",
+    level: "Mid‑Senior",
+    tags: ["IaaS", "GTM", "SRE", "Security"],
+    description:
+      "Own roadmaps for Islands, pricing levers, and developer experience. Translate customer value chains into clear platform bets.",
+    responsibilities: [
+      "Define and prioritize platform initiatives",
+      "Partner with Eng/Design on specs and delivery",
+      "Instrument usage and iterate from data",
+    ],
+    requirements: [
+      "4+ years PM in infra or developer platforms",
+      "Strong systems thinking and crisp writing",
+    ],
+  },
+  {
+    id: "des-ux-003",
+    title: "Product Designer, DevEx",
+    team: "Design • Developer Experience",
+    location: "Remote, India",
+    type: "Full‑time",
+    level: "Mid‑Senior",
+    tags: ["Design Systems", "DevTools", "Prototyping"],
+    description:
+      "Define end‑to‑end flows from signup to deploy. Build a coherent, fast IA for operators and developers.",
+    requirements: ["3+ years in product design", "Portfolio with complex systems"],
+  },
+];
+
+// ---------- State ----------
+const $ = (s, el=document)=> el.querySelector(s); const $$ = (s, el=document)=> Array.from(el.querySelectorAll(s));
+const state = { q: "", loc: "All", team: "All", type: "All", jobs: JOBS.slice() };
+
+function unique(arr){ return Array.from(new Set(arr)); }
+function fillOptions(sel, items){ sel.innerHTML = items.map(v=>`<option>${v}</option>`).join(""); }
+
+// ---------- Render ----------
+function computeFiltered(){
+  const term = state.q.trim().toLowerCase();
+  return state.jobs.filter(j=>{
+    const hit = [j.title,j.team,j.location,j.type,j.level].filter(Boolean).join(" ").toLowerCase().includes(term);
+    const okLoc = state.loc === "All" || j.location === state.loc;
+    const okTeam = state.team === "All" || j.team === state.team;
+    const okType = state.type === "All" || j.type === state.type;
+    return hit && okLoc && okTeam && okType;
+  });
+}
+
+function renderJobs(){
+  const list = $("#jobs");
+  const items = computeFiltered();
+  list.innerHTML = items.map(job=>`
+    <li class="job">
+      <button aria-haspopup="dialog" aria-controls="dialog" data-id="${job.id}">
+        <div class="row">
+          <div>
+            <div class="title">${job.title}</div>
+            <div class="meta">
+              <span>${job.team}</span><span>•</span>
+              <span>${job.location}</span><span>•</span>
+              <span>${job.type}</span>${job.level?`<span>•</span><span>${job.level}</span>`:""}
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <span class="apply-pill">Apply</span>
+            <span aria-hidden>›</span>
+          </div>
+        </div>
+      </button>
+    </li>`).join("");
+  $("#matchCount").textContent = `${items.length} matching role${items.length!==1?"s":""}`;
+  // attach open handlers
+  $$('button[data-id]',$("#jobs")).forEach(btn=> btn.addEventListener('click',()=> openDialog(btn.dataset.id)));
+}
+
+function renderFilters(){
+  const locs = ["All", ...unique(state.jobs.map(j=>j.location))];
+  const teams = ["All", ...unique(state.jobs.map(j=>j.team))];
+  const types = ["All", ...unique(state.jobs.map(j=>j.type))];
+  fillOptions($("#loc"), locs); fillOptions($("#team"), teams); fillOptions($("#type"), types);
+  $("#stat-open").textContent = state.jobs.length;
+  $("#stat-loc").textContent = unique(state.jobs.map(j=>j.location)).length;
+}
+
+// ---------- Dialog ----------
+function openDialog(id){
+  const job = state.jobs.find(j=>j.id===id); if(!job) return;
+  const body = $("#dlg-body");
+  const tagChips = (job.tags||[]).map(t=>`<span class="chip">${t}</span>`).join(" ");
+  body.innerHTML = `
+    <div class="meta" style="margin:4px 0 12px 0">${tagChips}</div>
+    ${job.description? `<div class="section"><strong>Overview</strong><p style="margin-top:6px;line-height:1.6">${escapeHtml(job.description)}</p></div>`: ''}
+    ${arrSection('What you will do', job.responsibilities)}
+    ${arrSection('What you bring', job.requirements)}
+    ${arrSection('Nice to have', job.niceToHave)}
+    <div class="section" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn primary" id="btn-apply">Apply now</button>
+      ${job.applyUrl? `<a class="btn" href="${job.applyUrl}" target="_blank" rel="noreferrer">Open external application</a>`: ''}
+    </div>
+    <div class="section" id="apply-wrap" style="display:none"></div>
+  `;
+  $("#overlay").classList.add("open"); $("#dialog").classList.add("open");
+  $("#dlg-title").textContent = job.title;
+  $("#dlg-close").onclick = closeDialog; $("#overlay").onclick = closeDialog;
+  const btn = $("#btn-apply"); if(btn){ btn.onclick = ()=> showApplyForm(job); }
+}
+
+function closeDialog(){ $("#overlay").classList.remove("open"); $("#dialog").classList.remove("open"); }
+
+function arrSection(title, arr){
+  if(!arr || !arr.length) return "";
+  const items = arr.map(x=>`<li>${escapeHtml(x)}</li>`).join("");
+  return `<div class="section"><strong>${title}</strong><ul class="bullets">${items}</ul></div>`;
+}
+
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+
+function showApplyForm(job){
+  const wrap = $("#apply-wrap");
+  wrap.style.display = "block";
+  wrap.innerHTML = `
+    <form id="apply-form">
+      <div class="form-row">
+        <div>
+          <label class="muted">Full name *</label>
+          <input name="name" required type="text" />
+        </div>
+        <div>
+          <label class="muted">Email *</label>
+          <input name="email" required type="email" />
+        </div>
+        <div>
+          <label class="muted">Phone</label>
+          <input name="phone" type="text" />
+        </div>
+        <div>
+          <label class="muted">Resume (PDF)</label>
+          <input name="resume" type="file" accept="application/pdf" />
+        </div>
+        <div style="grid-column:1/-1">
+          <label class="muted">Note</label>
+          <textarea name="note" rows="4" placeholder="Anything we should know?"></textarea>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button class="btn primary" type="submit">Submit application</button>
+        <button class="btn" type="button" id="cancel-apply">Cancel</button>
+      </div>
+      <p class="note">If submission fails, your email client opens with a draft to careers@islandcs.in.</p>
+    </form>`;
+
+  $("#cancel-apply").onclick = ()=>{ wrap.style.display = "none"; wrap.innerHTML = ""; };
+  $("#apply-form").onsubmit = async (e)=>{
+    e.preventDefault();
+    const formEl = e.currentTarget; const data = new FormData(formEl);
+    data.append("jobId", job.id); data.append("jobTitle", job.title);
+    try{
+      const resp = await fetch('/api/apply', { method:'POST', body:data });
+      if(!resp.ok) throw new Error('fail');
+      alert('Application submitted.');
+      wrap.style.display = "none"; wrap.innerHTML = "";
+    }catch(err){
+      const body = encodeURIComponent(`Job: ${job.title} (${job.id})\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nPhone: ${data.get('phone')||''}\nNote: ${data.get('note')||''}`);
+      window.location.href = `mailto:careers@islandcs.in?subject=Application%20for%20${encodeURIComponent(job.title)}&body=${body}`;
+    }
+  };
+}
+
+// ---------- Wire up ----------
+window.addEventListener('DOMContentLoaded', ()=>{
+  renderFilters(); renderJobs();
+  const q = $("#q"), loc = $("#loc"), team = $("#team"), type = $("#type");
+  q.addEventListener('input', ()=>{ state.q = q.value; renderJobs(); });
+  loc.addEventListener('change', ()=>{ state.loc = loc.value; renderJobs(); });
+  team.addEventListener('change', ()=>{ state.team = team.value; renderJobs(); });
+  type.addEventListener('change', ()=>{ state.type = type.value; renderJobs(); });
+});
+</script>
+</body>
+</html>
