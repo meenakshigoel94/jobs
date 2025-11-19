@@ -17,8 +17,8 @@
         <a href="index.html">Home</a>
         <a href="pricing.html">Pricing</a>
         <a href="docs.html">Docs</a>
-        <a href="blog.html">Blog</a>
         <a href="company.html">Company</a>
+        <a href="blog.html">Blog</a>
         <a href="support.html">Support</a>
       </nav>
       <div class="utility-links">
@@ -139,13 +139,12 @@
         <a href="#">Terms</a>
         <a href="#">Privacy</a>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    toggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  </script>
-</body>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const mobile = document.querySelector('.mobile-menu');
+      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+    </script>
+  </body>
 </html>
