@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Demo | ICS</title>
+  <style>
+    :root { --accent:#ee8119; --blue-mid:#789cf8; --text:#1c1d21; --bg:#f7f8fb; --border:#e3e7ef; }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;}
+    .nav-wrapper{max-width:1200px;margin:0 auto;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+    .logo{font-weight:700;}
+    .nav-links{display:flex;gap:1rem;}
+    .nav-links a{color:var(--text);font-weight:500;}
+    .cta-group{display:flex;gap:0.75rem;}
+    .btn{padding:0.65rem 1.25rem;border-radius:999px;border:1px solid transparent;font-weight:600;cursor:pointer;}
+    .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+    .btn-outline{background:transparent;color:var(--accent);border-color:var(--accent);}
+    .menu-toggle{display:none;border:none;background:transparent;font-size:1.5rem;}
+    main{padding:2rem 1rem 4rem;}
+    .container{max-width:1100px;margin:0 auto;}
+    .hero{background:#fff;border-radius:22px;padding:3rem;border:1px solid var(--border);box-shadow:0 12px 30px rgba(0,0,0,0.04);}
+    .demo-grid{margin-top:3rem;display:grid;grid-template-columns:2fr 1fr;gap:2rem;}
+    form{background:#fff;border-radius:18px;padding:2rem;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.04);display:grid;gap:1rem;}
+    input, select, textarea{padding:0.85rem 1rem;border-radius:12px;border:1px solid var(--border);font-family:inherit;font-size:1rem;}
+    textarea{min-height:140px;}
+    .sidebar{background:#fff;border-radius:18px;padding:2rem;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.04);}
+    ul{padding-left:1.1rem;}
+    footer{background:#0f1118;color:#fff;padding:2rem 1rem;margin-top:3rem;}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;}
+    .footer-links,.footer-social{display:flex;gap:1rem;flex-wrap:wrap;}
+    .footer-links a,.footer-social a{color:#fff;}
+    @media(max-width:900px){
+      .nav-links,.cta-group{display:none;}
+      .menu-toggle{display:block;}
+      .mobile-menu{display:none;flex-direction:column;padding:1rem 1.5rem 2rem;gap:1rem;border-top:1px solid var(--border);background:#fff;}
+      .mobile-menu.open{display:flex;}
+      .mobile-menu .cta-group{display:flex;flex-direction:column;}
+      .demo-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrapper">
+      <div class="logo">Island Computing Services</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="docs.html">Docs</a>
+        <a href="blog.html">Blog</a>
+        <a href="company.html">Company</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <div class="cta-group">
+        <a class="btn btn-outline" href="demo.html">Request demo</a>
+        <a class="btn btn-primary" href="login.html">Login</a>
+      </div>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="docs.html">Docs</a>
+      <a href="blog.html">Blog</a>
+      <a href="company.html">Company</a>
+      <a href="support.html">Support</a>
+      <div class="cta-group">
+        <a class="btn btn-outline" href="demo.html">Request demo</a>
+        <a class="btn btn-primary" href="login.html">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <p style="color:var(--accent);font-weight:600;">Early access</p>
+        <h1>Request a demo and get early-access free credits</h1>
+        <p>Qualifying teams get ICS credits to try compute, data, and dev tools.</p>
+      </section>
+
+      <div class="demo-grid">
+        <form>
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Work email" required>
+          <input type="text" placeholder="Company" required>
+          <input type="text" placeholder="Role" required>
+          <select required>
+            <option value="" disabled selected>Company size</option>
+            <option>1-10</option>
+            <option>11-50</option>
+            <option>51-200</option>
+            <option>200+</option>
+          </select>
+          <select required>
+            <option value="" disabled selected>Current cloud provider</option>
+            <option>None</option>
+            <option>AWS</option>
+            <option>Azure</option>
+            <option>GCP</option>
+            <option>Other</option>
+          </select>
+          <textarea placeholder="Primary use case" required></textarea>
+          <select required>
+            <option value="" disabled selected>Timeframe</option>
+            <option>Immediately</option>
+            <option>1-3 months</option>
+            <option>3-6 months</option>
+            <option>6+ months</option>
+          </select>
+          <button class="btn btn-primary" type="submit">Request demo</button>
+        </form>
+        <div class="sidebar">
+          <h2>What you get</h2>
+          <ul>
+            <li>Live walkthrough of ICS islands, compute, and managed infra.</li>
+            <li>Architecture suggestions for your workload.</li>
+            <li>Free credits applied to your account after onboarding.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© Island Computing Services. Simplifying Computing.</div>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Acceptable Use</a>
+      </div>
+      <div class="footer-social">
+        <a href="#">LinkedIn</a>
+        <a href="#">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  </script>
+</body>
+</html>
