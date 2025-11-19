@@ -1,364 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Island Computing Services | Simplifying Computing</title>
-  <style>
-    :root {
-      --accent: #ee8119;
-      --accent-soft: #f7b675;
-      --blue-light: #95bdff;
-      --blue-mid: #789cf8;
-      --text: #1c1d21;
-      --bg: #f7f8fb;
-      --card-bg: #ffffff;
-      --border: #e3e7ef;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--blue-mid); text-decoration: none; }
-    img { max-width: 100%; }
-    header {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-    }
-    .nav-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .logo { font-weight: 700; font-size: 1.05rem; }
-    nav { display: flex; align-items: center; gap: 1.5rem; }
-    .nav-links { display: flex; gap: 1rem; }
-    .nav-links a { color: var(--text); font-weight: 500; }
-    .cta-group { display: flex; gap: 0.75rem; }
-    .btn {
-      padding: 0.65rem 1.25rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-    .btn:hover { transform: translateY(-1px); }
-    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .btn-outline { background: transparent; color: var(--accent); border-color: var(--accent); }
-    .menu-toggle { display: none; border: none; background: transparent; font-size: 1.5rem; }
-    main { padding: 2rem 1rem 4rem; }
-    .container { max-width: 1200px; margin: 0 auto; }
-    .hero {
-      background: radial-gradient(circle at top left, rgba(238,129,25,0.15), transparent 50%),
-                  radial-gradient(circle at top right, rgba(121,156,248,0.15), transparent 50%),
-                  #fff;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 3rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-    .hero h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 1rem; }
-    .hero p { color: #444; }
-    .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0; }
-    .hero-visual {
-      background: var(--bg);
-      border: 1px dashed var(--blue-light);
-      padding: 1.5rem;
-      border-radius: 18px;
-      min-height: 280px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-    .visual-card {
-      background: #fff;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      padding: 1rem;
-    }
-    .usp-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .usp-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.25rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-    }
-    .usp-card .icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--blue-light);
-      margin-bottom: 0.75rem;
-    }
-    section { margin-top: 4rem; }
-    section h2 { font-size: 1.9rem; margin-bottom: 1rem; }
-    .cards-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.04);
-    }
-    .stepper { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-    .step {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1rem;
-      border-left: 4px solid var(--blue-mid);
-    }
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
-    .pricing-card { text-align: center; border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; background: #fff; }
-    .blog-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
-    footer {
-      background: #0f1118;
-      color: #fff;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-    }
-    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
-    .footer-links, .footer-social { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .footer-links a, .footer-social a { color: #fff; font-size: 0.95rem; }
-    @media (max-width: 900px) {
-      .nav-links, .cta-group { display: none; }
-      .menu-toggle { display: block; }
-      .mobile-menu {
-        display: none;
-        flex-direction: column;
-        padding: 1rem 1.5rem 2rem;
-        gap: 1rem;
-        border-top: 1px solid var(--border);
-        background: #fff;
-      }
-      .mobile-menu.open { display: flex; }
-      .mobile-menu a { color: var(--text); }
-      .mobile-menu .cta-group { display: flex; flex-direction: column; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="nav-wrapper">
-      <div class="logo">Island Computing Services</div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Island Computing Services</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="nav-shell">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">I</span>
+          Island
+        </a>
+        <nav class="primary-nav">
+          <a href="pricing.html">Product</a>
+          <a href="docs.html">Docs</a>
+          <a href="company.html">Company</a>
+          <a href="blog.html">Blog</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="link" href="pricing.html">Pricing</a>
+          <a class="btn ghost" href="demo.html">Request demo</a>
+          <a class="btn primary" href="login.html">Launch console</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+      <div class="mobile-menu">
+        <a href="pricing.html">Product</a>
         <a href="docs.html">Docs</a>
-        <a href="blog.html">Blog</a>
         <a href="company.html">Company</a>
+        <a href="blog.html">Blog</a>
         <a href="support.html">Support</a>
-      </nav>
-      <div class="cta-group">
-        <a class="btn btn-outline" href="demo.html">Request demo</a>
-        <a class="btn btn-primary" href="login.html">Login</a>
+        <a class="btn ghost" href="demo.html">Request demo</a>
+        <a class="btn primary" href="login.html">Launch console</a>
       </div>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="docs.html">Docs</a>
-      <a href="blog.html">Blog</a>
-      <a href="company.html">Company</a>
-      <a href="support.html">Support</a>
-      <div class="cta-group">
-        <a class="btn btn-outline" href="demo.html">Request demo</a>
-        <a class="btn btn-primary" href="login.html">Login</a>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <div class="container">
-      <section class="hero">
-        <div>
-          <p style="color: var(--accent); font-weight: 600;">India-built cloud platform</p>
-          <h1>Simplifying Computing for cloud-native and AI-native builders.</h1>
-          <p>Island Computing Services is a India-built cloud platform that replaces complex, tool-sprawl-heavy hyperscaler setups with an opinionated, integrated stack across compute, data, and dev tools.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="demo.html">Request demo &amp; free credits</a>
-            <a class="btn btn-outline" href="pricing.html">View pricing</a>
+    <main>
+      <div class="page-shell">
+        <section class="hero hero-console">
+          <h1>Simplifying computing for build what's next</h1>
+          <p>Easy setup. Deploy fast. Secure by default.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="demo.html">Get started for free</a>
           </div>
-          <div class="usp-grid">
-            <div class="usp-card">
-              <div class="icon"></div>
-              <h3>Simple by design</h3>
-              <p>Turn ‘too complex to manage’ cloud setups into guided, opinionated workflows across compute, data, and delivery.</p>
+          <div class="hero-assist">
+            <div class="query-bar">
+              <input type="text" placeholder="Ask anything about us" aria-label="Ask anything about us" />
+              <button aria-label="Submit question">&#8594;</button>
             </div>
-            <div class="usp-card">
-              <div class="icon"></div>
-              <h3>One platform, no tool sprawl</h3>
-              <p>Replace the 5+ tools you use today with a single integrated platform for provisioning, CI/CD, monitoring, and operations.</p>
-            </div>
-            <div class="usp-card">
-              <div class="icon"></div>
-              <h3>AI-native from day zero</h3>
-              <p>Built for GenAI-era workloads where infrastructure, data, and inference need to move fast and stay cost-efficient.</p>
-            </div>
-            <div class="usp-card">
-              <div class="icon"></div>
-              <h3>India-first, cloud-native by default</h3>
-              <p>Made in India for the 1 lakh+ cloud-native startups coming up by 2030, with data sovereignty and deeptech at the core.</p>
+            <div class="prompt-grid">
+              <button>How can I try ICS products for free?</button>
+              <button>How do I build and use AI agents?</button>
+              <button>Discover solutions for my needs?</button>
+              <button>Summarize what's new with ICS?</button>
             </div>
           </div>
-        </div>
-        <div class="hero-visual">
-          <div class="visual-card">
-            <h4>Cluster</h4>
-            <p>Compute islands</p>
-          </div>
-          <div class="visual-card">
-            <h4>Services</h4>
-            <p>APIs, workers</p>
-          </div>
-          <div class="visual-card">
-            <h4>Data</h4>
-            <p>Managed DBs</p>
-          </div>
-          <div class="visual-card">
-            <h4>Observability</h4>
-            <p>Monitoring &amp; logging</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>What you run on ICS</h2>
-        <div class="cards-row">
-          <div class="card">
-            <h3>Compute</h3>
-            <p>Opinionated compute with built-in networking and security for your services and APIs.</p>
-            <a href="pricing.html#compute">Learn more →</a>
+        <section class="section">
+          <div class="section-header">
+            <h2>Trusted by India-first builders and global expansions</h2>
+            <p>Scale from Series A startups to enterprise subsidiaries while keeping data sovereign.</p>
           </div>
-          <div class="card">
-            <h3>Managed Infra &amp; DevOps</h3>
-            <p>Managed orchestration, CI/CD, monitoring, and logging in a single platform.</p>
-            <a href="pricing.html#infra">Learn more →</a>
+          <div class="logo-row">
+            <span>Vertex</span>
+            <span>Lyra</span>
+            <span>Atlas</span>
+            <span>Northwind</span>
+            <span>Observa</span>
+            <span>Blueleaf</span>
           </div>
-          <div class="card">
-            <h3>Data Management</h3>
-            <p>Managed databases, backups, and HA for modern, data-heavy workloads.</p>
-            <a href="pricing.html#data">Learn more →</a>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>From code to cloud, without the chaos</h2>
-        <div class="stepper">
-          <div class="step">
-            <h4>Step 1</h4>
-            <p>Create an island environment</p>
+        <section class="section">
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>97%</strong>
+              <span>Decrease in onboarding effort by replacing five disconnected tools.</span>
+            </div>
+            <div class="stat">
+              <strong>4.8×</strong>
+              <span>Deployment speedup with opinionated CI/CD and observability baked in.</span>
+            </div>
+            <div class="stat">
+              <strong>₹12 Cr</strong>
+              <span>Average savings over three-year hyperscaler contracts.</span>
+            </div>
+            <div class="stat">
+              <strong>99.99%</strong>
+              <span>SLA across Indian and global regions with in-country support.</span>
+            </div>
           </div>
-          <div class="step">
-            <h4>Step 2</h4>
-            <p>Deploy services and databases</p>
-          </div>
-          <div class="step">
-            <h4>Step 3</h4>
-            <p>Wire in CI/CD, monitoring, and logging</p>
-          </div>
-          <div class="step">
-            <h4>Step 4</h4>
-            <p>Scale and optimize with real-time visibility</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>Transparent, usage-based pricing</h2>
-        <p>Pay for what you use across compute, data, and dev tools. No hidden line items, no surprise line-item charges.</p>
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <h3>Starter APIs</h3>
-            <p>From ₹X/month</p>
+        <section class="section">
+          <div class="section-header">
+            <h2>What you run on ICS</h2>
+            <p>
+              Opinionated building blocks for compute, managed infra, and data so you can ship
+              faster without juggling point tools.
+            </p>
           </div>
-          <div class="pricing-card">
-            <h3>Managed DBs</h3>
-            <p>From ₹Y/month</p>
+          <div class="grid three-col">
+            <div class="card">
+              <h3>Elastic compute plane</h3>
+              <p>Provision islands with built-in networking, autoscaling, and per-second billing.</p>
+            </div>
+            <div class="card">
+              <h3>Managed infra &amp; DevOps</h3>
+              <p>CI/CD, monitoring, and incident workflows are wired in from day zero.</p>
+            </div>
+            <div class="card">
+              <h3>Data management</h3>
+              <p>Managed databases, backups, and sovereignty controls for AI-era workloads.</p>
+            </div>
           </div>
-          <div class="pricing-card">
-            <h3>Full stack on ICS</h3>
-            <p>From ₹Z/month</p>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>From code to cloud, without the chaos</h2>
+            <p>Apple-level polish keeps each workflow calm while the platform handles the plumbing.</p>
           </div>
-        </div>
-        <a class="btn btn-primary" href="pricing.html" style="margin-top:1.5rem; display:inline-block;">See detailed pricing</a>
-      </section>
+          <div class="grid two-col">
+            <div class="card">
+              <h3>Create an island</h3>
+              <p>
+                Choose the compute profile, attach managed databases, and apply environment guardrails
+                in a single flow.
+              </p>
+              <ul>
+                <li>Provision APIs, workers, and queues</li>
+                <li>Attach Postgres, Mongo, or vector stores</li>
+                <li>Wire networking and policies automatically</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Ship &amp; operate</h3>
+              <p>
+                Git-native deployments, real-time observability, and spend insights keep finance and
+                SREs aligned.
+              </p>
+              <ul>
+                <li>Opinionated CI/CD pipelines</li>
+                <li>Unified monitoring &amp; logging</li>
+                <li>Usage &amp; spend guardrails</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-      <section>
-        <h2>Built in India for the next wave of builders</h2>
-        <p>Island Computing Services is building a new kind of cloud platform for the 1 lakh+ cloud-native and AI-native startups emerging in India and beyond.</p>
-        <a class="btn btn-outline" href="company.html">Learn more about us</a>
-      </section>
+        <section class="section">
+          <div class="section-header">
+            <h2>Customer spotlight</h2>
+            <p>Digital natives across Bengaluru, Hyderabad, and Singapore rely on ICS.</p>
+          </div>
+          <div class="testimonial">
+            “Island Computing Services helped our 60-person platform team retire seven vendors. We
+            run APIs, inference, and analytics from one console, while finance finally sees exact
+            spend by workload.”
+            <br /><br /><strong>Hikari Patel — Chief Data Officer, LumenAir</strong>
+          </div>
+        </section>
 
-      <section>
-        <h2>Unspoken complexity of building in the cloud</h2>
-        <div class="blog-cards">
-          <a class="card" href="blog.html">
-            <h3>Unspoken complexity of building in the cloud</h3>
-            <p>Why modern teams need opinionated platforms.</p>
-          </a>
-          <a class="card" href="blog.html">
-            <h3>Why we’re Simplifying Computing</h3>
-            <p>The story behind ICS and the platform we’re building.</p>
-          </a>
-          <a class="card" href="blog.html">
-            <h3>Building AI-native workloads without the hyperscaler overhead</h3>
-            <p>How ICS helps teams stay nimble and cost-effective.</p>
-          </a>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div>© Island Computing Services. Simplifying Computing.</div>
-      <div class="footer-links">
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">Acceptable Use</a>
+        <section class="section">
+          <div class="card" style="text-align:center;">
+            <p class="badge">Ready to get started?</p>
+            <h2>Spin up your first island in under 5 minutes.</h2>
+            <div class="chip-row" style="justify-content:center;">
+            <a class="btn primary" href="demo.html">Talk to our team</a>
+            <a class="btn ghost" href="support.html">Visit support</a>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="footer-social">
-        <a href="#">LinkedIn</a>
-        <a href="#">X</a>
-      </div>
-    </div>
-  </footer>
+    </main>
 
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    toggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-    });
-  </script>
-</body>
+    <footer class="footer">
+      <div class="footer-shell">
+        <div class="footer-grid">
+          <div>
+            <strong>Island Computing Services</strong>
+            <p>Simplifying Computing for India-first, AI-native builders.</p>
+          </div>
+          <div>
+            <p>Product</p>
+            <a href="pricing.html">Warehouses</a><br />
+            <a href="pricing.html">Collaboration</a><br />
+            <a href="docs.html">Developers</a>
+          </div>
+          <div>
+            <p>Company</p>
+            <a href="company.html">About</a><br />
+            <a href="blog.html">Newsroom</a><br />
+            <a href="support.html">Contact</a>
+          </div>
+          <div>
+            <p>Resources</p>
+            <a href="docs.html">Docs</a><br />
+            <a href="support.html">Support</a><br />
+            <a href="demo.html">Request demo</a>
+          </div>
+        </div>
+        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const mobile = document.querySelector('.mobile-menu');
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
+    </script>
+  </body>
 </html>
