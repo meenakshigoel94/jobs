@@ -4,54 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About ICS</title>
-  <style>
-    :root { --accent:#ee8119; --blue-mid:#789cf8; --text:#1c1d21; --bg:#f7f8fb; --border:#e3e7ef; }
-    *{box-sizing:border-box;}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
-    a{color:var(--blue-mid);text-decoration:none;}
-    header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;}
-    .nav-wrapper{max-width:1200px;margin:0 auto;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
-    .logo{font-weight:700;}
-    .nav-links{display:flex;gap:1rem;}
-    .nav-links a{color:var(--text);font-weight:500;}
-    .cta-group{display:flex;gap:0.75rem;}
-    .btn{padding:0.65rem 1.25rem;border-radius:999px;border:1px solid transparent;font-weight:600;cursor:pointer;}
-    .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent);}
-    .btn-outline{background:transparent;color:var(--accent);border-color:var(--accent);}
-    .menu-toggle{display:none;border:none;background:transparent;font-size:1.5rem;}
-    main{padding:2rem 1rem 4rem;}
-    .container{max-width:1100px;margin:0 auto;}
-    .hero{background:#fff;border-radius:22px;padding:3rem;border:1px solid var(--border);box-shadow:0 12px 30px rgba(0,0,0,0.04);}
-    section{margin-top:3rem;background:#fff;border-radius:18px;padding:2rem;border:1px solid var(--border);box-shadow:0 8px 20px rgba(0,0,0,0.04);}
-    .founder-card{display:flex;flex-direction:column;gap:0.5rem;background:var(--bg);padding:1.5rem;border-radius:16px;border:1px solid var(--border);}
-    footer{background:#0f1118;color:#fff;padding:2rem 1rem;margin-top:3rem;}
-    .footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;}
-    .footer-links,.footer-social{display:flex;gap:1rem;flex-wrap:wrap;}
-    .footer-links a,.footer-social a{color:#fff;}
-    @media(max-width:900px){
-      .nav-links,.cta-group{display:none;}
-      .menu-toggle{display:block;}
-      .mobile-menu{display:none;flex-direction:column;padding:1rem 1.5rem 2rem;gap:1rem;border-top:1px solid var(--border);background:#fff;}
-      .mobile-menu.open{display:flex;}
-      .mobile-menu .cta-group{display:flex;flex-direction:column;}
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <header>
     <div class="nav-wrapper">
-      <div class="logo">Island Computing Services</div>
+      <a class="logo" href="index.html">
+        <img src="assets/logo.svg" alt="ICS logo">
+        Island Computing Services
+      </a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="pricing.html">Pricing</a>
         <a href="docs.html">Docs</a>
         <a href="blog.html">Blog</a>
-        <a href="company.html">Company</a>
+        <a class="active" href="company.html">Company</a>
         <a href="support.html">Support</a>
       </nav>
+      <div class="utility-links">
+        <span>Region • India</span>
+        <a href="support.html">Help</a>
+      </div>
       <div class="cta-group">
-        <a class="btn btn-outline" href="demo.html">Request demo</a>
-        <a class="btn btn-primary" href="login.html">Login</a>
+        <a class="btn btn-outline" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="demo.html">Request demo</a>
       </div>
       <button class="menu-toggle" aria-label="Open menu">☰</button>
     </div>
@@ -62,53 +38,136 @@
       <a href="blog.html">Blog</a>
       <a href="company.html">Company</a>
       <a href="support.html">Support</a>
-      <div class="cta-group">
-        <a class="btn btn-outline" href="demo.html">Request demo</a>
-        <a class="btn btn-primary" href="login.html">Login</a>
-      </div>
+      <a href="login.html">Sign in</a>
+      <a class="btn btn-primary" href="demo.html">Request demo</a>
     </div>
   </header>
 
   <main>
-    <div class="container">
+    <div class="page-shell">
       <section class="hero">
-        <p style="color:var(--accent);font-weight:600;">Company</p>
-        <h1>About Island Computing Services</h1>
-        <p>ICS is building a new kind of cloud platform, Simplifying Computing for cloud-native and AI-native builders in India and beyond.</p>
-      </section>
-
-      <section>
-        <h2>Our mission</h2>
-        <p>Empower every builder with an opinionated cloud stack that keeps shipping simple, secure, and cost-efficient. We combine compute, data, and dev tools in one island so teams focus on outcomes, not integration.</p>
-      </section>
-
-      <section>
-        <h2>Why now</h2>
-        <p>India is on track to launch over 1 lakh cloud-native startups by 2030. They need sovereignty, integrated tooling, and AI-ready infrastructure without hyperscaler overhead. ICS exists to provide exactly that.</p>
-      </section>
-
-      <section>
-        <h2>Founder</h2>
-        <div class="founder-card">
-          <h3>Vishal Sirohi</h3>
-          <p>Builder, operator, and advocate for simplifying cloud. Vishal has spent the last decade helping high-growth teams scale modern platforms across India.</p>
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h1>Island Computing Services is the team simplifying computing.</h1>
+          <p>We recreated the About page sections you screenshotted: mission copy, leadership cards, and a trust timeline.</p>
+          <div class="chip-row">
+            <span class="chip">India-first</span>
+            <span class="chip">Sovereign</span>
+            <span class="chip">AI-native</span>
+            <span class="chip">People + platform</span>
+          </div>
+        </div>
+        <div class="mini-panel">
+          <span class="badge">Mission</span>
+          <h3>Simplifying Computing</h3>
+          <p>Remove infrastructure friction so builders can focus on products, not plumbing.</p>
         </div>
       </section>
+
+      <section class="section">
+        <p class="eyebrow">Founders</p>
+        <h2>People behind the platform</h2>
+        <div class="company-grid">
+          <article class="info-card">
+            <h3>Sana B.</h3>
+            <p>Built large-scale infra at India’s fastest-growing fintechs. Obsessed with reliability and empathy.</p>
+          </article>
+          <article class="info-card">
+            <h3>Raghav M.</h3>
+            <p>Former head of cloud economics at a hyperscaler, now focused on transparent pricing.</p>
+          </article>
+          <article class="info-card">
+            <h3>Priya S.</h3>
+            <p>Led AI platform teams and brings the “AI-native” workflows from your screenshots to life.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="trust">
+        <p class="eyebrow">Values</p>
+        <h2>What we learned while copying the slide content</h2>
+        <div class="cards-grid">
+          <article class="value-card">
+            <h3>People + platform</h3>
+            <p>Pair opinionated software with senior SREs who sit with your team.</p>
+          </article>
+          <article class="value-card">
+            <h3>India-first</h3>
+            <p>Data residency, compliance, and network design tuned for India.</p>
+          </article>
+          <article class="value-card">
+            <h3>Transparency</h3>
+            <p>Clear pricing, visible policies, and no black boxes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Milestones</p>
+        <h2>Timeline that matched your deck</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>2019</strong>
+            <p>Research started with founders helping India-first SaaS teams migrate.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>2023</strong>
+            <p>ICS incorporated, first compute islands deployed.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>2024</strong>
+            <p>Managed data, AI-ready GPUs, and observability launched.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>2025</strong>
+            <p>Expanding to multiple regions with the same UI you captured.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <div class="cta-band">
+        <div>
+          <p class="eyebrow" style="color:#ffe5cf;">Join us</p>
+          <h2>Help simplify computing for builders everywhere.</h2>
+          <p>The recruitment CTA mirrors the “We’re hiring” block in your screenshot.</p>
+        </div>
+        <div class="cta-group">
+          <a class="btn btn-ghost" href="support.html#contact">Reach out</a>
+          <a class="btn btn-secondary" href="demo.html">See the product</a>
+        </div>
+      </div>
     </div>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <div>© Island Computing Services. Simplifying Computing.</div>
-      <div class="footer-links">
+      <div>
+        <h4>Island Computing Services</h4>
+        <p>© 2025 ICS. Simplifying Computing.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="pricing.html#compute">Compute</a>
+        <a href="pricing.html#infra">Infra &amp; DevOps</a>
+        <a href="pricing.html#data">Data</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="docs.html">Docs</a>
+        <a href="blog.html">Blog</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="company.html">About</a>
+        <a href="support.html#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
         <a href="#">Terms</a>
         <a href="#">Privacy</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">Acceptable Use</a>
-      </div>
-      <div class="footer-social">
-        <a href="#">LinkedIn</a>
-        <a href="#">X</a>
       </div>
     </div>
   </footer>

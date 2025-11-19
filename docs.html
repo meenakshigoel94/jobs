@@ -4,55 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ICS Docs</title>
-  <style>
-    :root { --accent:#ee8119; --blue-mid:#789cf8; --text:#1c1d21; --bg:#f7f8fb; --border:#e3e7ef; }
-    *{box-sizing:border-box;}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
-    a{color:var(--blue-mid);text-decoration:none;}
-    header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;}
-    .nav-wrapper{max-width:1200px;margin:0 auto;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
-    .logo{font-weight:700;}
-    .nav-links{display:flex;gap:1rem;}
-    .nav-links a{color:var(--text);font-weight:500;}
-    .cta-group{display:flex;gap:0.75rem;}
-    .btn{padding:0.65rem 1.25rem;border-radius:999px;border:1px solid transparent;font-weight:600;cursor:pointer;}
-    .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent);}
-    .btn-outline{background:transparent;color:var(--accent);border-color:var(--accent);}
-    .menu-toggle{display:none;border:none;background:transparent;font-size:1.5rem;}
-    main{padding:2rem 1rem 4rem;}
-    .container{max-width:1100px;margin:0 auto;}
-    .hero{background:#fff;border-radius:20px;padding:3rem;border:1px solid var(--border);box-shadow:0 10px 30px rgba(0,0,0,0.04);text-align:center;}
-    .hero h1{font-size:2.5rem;margin-bottom:1rem;}
-    .docs-grid{margin-top:3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;}
-    .doc-card{background:#fff;border-radius:16px;padding:1.5rem;border:1px solid var(--border);box-shadow:0 8px 20px rgba(0,0,0,0.04);}
-    footer{background:#0f1118;color:#fff;padding:2rem 1rem;margin-top:3rem;}
-    .footer-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;}
-    .footer-links,.footer-social{display:flex;gap:1rem;flex-wrap:wrap;}
-    .footer-links a,.footer-social a{color:#fff;}
-    @media(max-width:900px){
-      .nav-links,.cta-group{display:none;}
-      .menu-toggle{display:block;}
-      .mobile-menu{display:none;flex-direction:column;padding:1rem 1.5rem 2rem;gap:1rem;border-top:1px solid var(--border);background:#fff;}
-      .mobile-menu.open{display:flex;}
-      .mobile-menu .cta-group{display:flex;flex-direction:column;}
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <header>
     <div class="nav-wrapper">
-      <div class="logo">Island Computing Services</div>
+      <a class="logo" href="index.html">
+        <img src="assets/logo.svg" alt="ICS logo">
+        Island Computing Services
+      </a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="pricing.html">Pricing</a>
-        <a href="docs.html">Docs</a>
+        <a class="active" href="docs.html">Docs</a>
         <a href="blog.html">Blog</a>
         <a href="company.html">Company</a>
         <a href="support.html">Support</a>
       </nav>
+      <div class="utility-links">
+        <span>Region • India</span>
+        <a href="support.html">Help</a>
+      </div>
       <div class="cta-group">
-        <a class="btn btn-outline" href="demo.html">Request demo</a>
-        <a class="btn btn-primary" href="login.html">Login</a>
+        <a class="btn btn-outline" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="demo.html">Request demo</a>
       </div>
       <button class="menu-toggle" aria-label="Open menu">☰</button>
     </div>
@@ -63,36 +38,100 @@
       <a href="blog.html">Blog</a>
       <a href="company.html">Company</a>
       <a href="support.html">Support</a>
-      <div class="cta-group">
-        <a class="btn btn-outline" href="demo.html">Request demo</a>
-        <a class="btn btn-primary" href="login.html">Login</a>
-      </div>
+      <a href="login.html">Sign in</a>
+      <a class="btn btn-primary" href="demo.html">Request demo</a>
     </div>
   </header>
 
   <main>
-    <div class="container">
+    <div class="page-shell">
       <section class="hero">
-        <p style="color:var(--accent);font-weight:600;">Documentation</p>
-        <h1>Docs and Getting Started</h1>
-        <p>Everything you need to create islands, deploy compute, wire in data, and ship with ICS.</p>
+        <div>
+          <p class="eyebrow">Documentation</p>
+          <h1>Everything you need to build on ICS.</h1>
+          <p>The docs landing pulls in the same headline, search pill, and “Get started” cards from your screenshot.</p>
+          <div class="chip-row">
+            <span class="chip">CLI</span>
+            <span class="chip">APIs</span>
+            <span class="chip">Terraform</span>
+            <span class="chip">AI pipelines</span>
+          </div>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="login.html">Open console</a>
+            <a class="btn btn-outline" href="support.html">Contact support</a>
+          </div>
+        </div>
+        <div class="mini-panel">
+          <div>
+            <span class="badge">Search docs</span>
+            <h3>Find guides instantly</h3>
+            <p>The placeholder search bar from the screenshot is represented by this panel.</p>
+          </div>
+          <div>
+            <span class="badge">Changelog</span>
+            <h3>Weekly updates</h3>
+            <p>Console, CLI, API, and AI features documented with the same format.</p>
+          </div>
+        </div>
       </section>
 
-      <div class="docs-grid">
-        <div class="doc-card" id="getting-started">
-          <h2>Getting started</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod tellus in maximus interdum.</p>
-          <a href="#">Read more →</a>
+      <section class="section">
+        <p class="eyebrow">Popular guides</p>
+        <h2>Start where the slides suggested</h2>
+        <div class="docs-grid">
+          <article class="doc-card">
+            <h3>Provision an island</h3>
+            <p>Use the CLI or console wizard to create secure environments, attach IAM, and configure policies.</p>
+            <a href="#">View guide →</a>
+          </article>
+          <article class="doc-card">
+            <h3>Deploy your first service</h3>
+            <p>Connect GitHub, set rollout rules, and view live metrics from the single console shown in the hero.</p>
+            <a href="#">View guide →</a>
+          </article>
+          <article class="doc-card">
+            <h3>Managed PostgreSQL</h3>
+            <p>Spin up HA clusters, manage snapshots, and stream data to analytics.</p>
+            <a href="#">View guide →</a>
+          </article>
+          <article class="doc-card">
+            <h3>AI-ready GPU islands</h3>
+            <p>Request GPU-backed capacity, share notebooks, and deploy inference endpoints.</p>
+            <a href="#">View guide →</a>
+          </article>
         </div>
-        <div class="doc-card" id="concepts">
-          <h2>Concepts</h2>
-          <p>Learn core ICS concepts: islands, environments, pipelines, data services, and policies.</p>
-          <a href="#">Read more →</a>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Reference</p>
+        <h2>APIs copied from the screenshot table</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Authentication</h3>
+            <p>Use ICS API keys, OAuth apps, or workload identities. Choose region per call.</p>
+          </article>
+          <article class="card">
+            <h3>Deployments API</h3>
+            <p>Create releases, monitor rollout status, and trigger rollbacks.</p>
+          </article>
+          <article class="card">
+            <h3>Monitoring API</h3>
+            <p>Query metrics, logs, traces, and spend to embed in your internal dashboards.</p>
+          </article>
         </div>
-        <div class="doc-card" id="api">
-          <h2>API reference</h2>
-          <p>Explore REST and CLI endpoints, authentication, and automation hooks.</p>
-          <a href="#">Read more →</a>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <div class="cta-band">
+        <div>
+          <p class="eyebrow" style="color:#ffe5cf;">Need more?</p>
+          <h2>Talk to the team behind the docs.</h2>
+          <p>The docs CTA mirrors your screenshot’s “Join office hours” band.</p>
+        </div>
+        <div class="cta-group">
+          <a class="btn btn-ghost" href="support.html">Ask support</a>
+          <a class="btn btn-secondary" href="company.html">Meet the team</a>
         </div>
       </div>
     </div>
@@ -100,16 +139,31 @@
 
   <footer>
     <div class="footer-inner">
-      <div>© Island Computing Services. Simplifying Computing.</div>
-      <div class="footer-links">
+      <div>
+        <h4>Island Computing Services</h4>
+        <p>© 2025 ICS. Simplifying Computing.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="pricing.html#compute">Compute</a>
+        <a href="pricing.html#infra">Infra &amp; DevOps</a>
+        <a href="pricing.html#data">Data</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="docs.html">Docs</a>
+        <a href="blog.html">Blog</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="company.html">About</a>
+        <a href="support.html#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
         <a href="#">Terms</a>
         <a href="#">Privacy</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">Acceptable Use</a>
-      </div>
-      <div class="footer-social">
-        <a href="#">LinkedIn</a>
-        <a href="#">X</a>
       </div>
     </div>
   </footer>
