@@ -1,155 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Island Computing Docs</title>
-    <link rel="stylesheet" href="assets/styles.css" />
-  </head>
-  <body>
-    <header class="global-header">
-      <div class="nav-shell">
-        <a class="logo" href="index.html">
-          <span class="logo-mark">I</span>
-          Island
-        </a>
-        <nav class="primary-nav">
-          <a href="pricing.html">Product</a>
-          <a class="active" href="docs.html">Docs</a>
-          <a href="company.html">Company</a>
-          <a href="blog.html">Blog</a>
-          <a href="support.html">Support</a>
-        </nav>
-        <div class="nav-cta">
-          <a class="link" href="pricing.html">Pricing</a>
-          <a class="btn ghost" href="demo.html">Request demo</a>
-          <a class="btn primary" href="login.html">Launch console</a>
-        </div>
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-      </div>
-      <div class="mobile-menu">
-        <a href="pricing.html">Product</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICS Docs</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header>
+    <div class="nav-wrapper">
+      <a class="logo" href="index.html">
+        <img src="assets/logo.svg" alt="ICS logo">
+        Island Computing Services
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
         <a class="active" href="docs.html">Docs</a>
+        <a href="blog.html">Blog</a>
         <a href="company.html">Company</a>
         <a href="blog.html">Blog</a>
         <a href="support.html">Support</a>
-        <a class="btn ghost" href="demo.html">Request demo</a>
-        <a class="btn primary" href="login.html">Launch console</a>
+      </nav>
+      <div class="utility-links">
+        <span>Region • India</span>
+        <a href="support.html">Help</a>
       </div>
-    </header>
+      <div class="cta-group">
+        <a class="btn btn-outline" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="demo.html">Request demo</a>
+      </div>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="docs.html">Docs</a>
+      <a href="blog.html">Blog</a>
+      <a href="company.html">Company</a>
+      <a href="support.html">Support</a>
+      <a href="login.html">Sign in</a>
+      <a class="btn btn-primary" href="demo.html">Request demo</a>
+    </div>
+  </header>
 
-    <main>
-      <div class="page-shell">
-        <section class="hero">
+  <main>
+    <div class="page-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Documentation</p>
+          <h1>Everything you need to build on ICS.</h1>
+          <p>The docs landing pulls in the same headline, search pill, and “Get started” cards from your screenshot.</p>
           <div class="chip-row">
-            <span class="chip">Docs</span>
-            <span class="chip">API</span>
-            <span class="chip">SQL</span>
+            <span class="chip">CLI</span>
+            <span class="chip">APIs</span>
+            <span class="chip">Terraform</span>
+            <span class="chip">AI pipelines</span>
           </div>
-          <h1>Documentation that feels as polished as the platform.</h1>
-          <p>
-            Built in the same spirit as Island Computing Services, the docs keep India-first teams
-            in flow with clear guides for compute islands, managed databases, CI/CD, and AI runtime
-            APIs—all without the noise.
-          </p>
-          <input type="search" placeholder="Search guides, SQL, APIs..." />
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Quick starts</h2>
-            <p>Walk through the most common workflows end-to-end.</p>
-          </div>
-          <div class="grid three-col">
-            <div class="card">
-              <p class="badge">10 min</p>
-              <h3>Provision your first island</h3>
-              <p>Launch compute, attach networking, and deploy a sample API.</p>
-            </div>
-            <div class="card">
-              <p class="badge">15 min</p>
-              <h3>Ship CI/CD + observability</h3>
-              <p>Connect Git, configure pipelines, and light up dashboards for your services.</p>
-            </div>
-            <div class="card">
-              <p class="badge">20 min</p>
-              <h3>Build an AI workload</h3>
-              <p>Deploy notebooks, attach vector storage, and expose inference endpoints.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Reference library</h2>
-            <p>Everything is organized into predictable collections.</p>
-          </div>
-          <div class="grid four-col">
-            <div class="card">
-              <h3>Compute &amp; networking</h3>
-              <p>Terraform specs, autoscale policies, and service mesh guides.</p>
-            </div>
-            <div class="card">
-              <h3>API &amp; SDK</h3>
-              <p>REST, CLI, Python, and Go references with samples.</p>
-            </div>
-            <div class="card">
-              <h3>Data &amp; governance</h3>
-              <p>Managed DBs, sovereignty rules, lineage, and masking.</p>
-            </div>
-            <div class="card">
-              <h3>Operations</h3>
-              <p>Monitoring, alerts, on-call, and incident automation.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Release notes</h2>
-            <p>Stay in sync with weekly improvements across India and global regions.</p>
-          </div>
-          <ul class="timeline">
-            <li>
-              <strong>June 18</strong> — Vector search GA across all Scale &amp; Sovereign accounts.
-            </li>
-            <li>
-              <strong>June 10</strong> — Private MPLS peering automation launched for Sovereign plans.
-            </li>
-            <li>
-              <strong>June 1</strong> — New trust center with RBI-ready audit evidence downloads.
-            </li>
-          </ul>
-        </section>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-shell">
-        <div class="footer-grid">
-          <div>
-            <strong>Island Computing Services</strong>
-            <p>Simplifying Computing for India-first, AI-native builders.</p>
-          </div>
-          <div>
-            <p>Product</p>
-            <a href="index.html">Overview</a><br />
-            <a href="pricing.html">Pricing</a><br />
-            <a href="demo.html">Demo</a>
-          </div>
-          <div>
-            <p>Developers</p>
-            <a href="docs.html">Docs</a><br />
-            <a href="support.html">Support</a><br />
-            <a href="blog.html">Changelog</a>
-          </div>
-          <div>
-            <p>Company</p>
-            <a href="company.html">About</a><br />
-            <a href="support.html">Contact</a>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="login.html">Open console</a>
+            <a class="btn btn-outline" href="support.html">Contact support</a>
           </div>
         </div>
-        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
+        <div class="mini-panel">
+          <div>
+            <span class="badge">Search docs</span>
+            <h3>Find guides instantly</h3>
+            <p>The placeholder search bar from the screenshot is represented by this panel.</p>
+          </div>
+          <div>
+            <span class="badge">Changelog</span>
+            <h3>Weekly updates</h3>
+            <p>Console, CLI, API, and AI features documented with the same format.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Popular guides</p>
+        <h2>Start where the slides suggested</h2>
+        <div class="docs-grid">
+          <article class="doc-card">
+            <h3>Provision an island</h3>
+            <p>Use the CLI or console wizard to create secure environments, attach IAM, and configure policies.</p>
+            <a href="#">View guide →</a>
+          </article>
+          <article class="doc-card">
+            <h3>Deploy your first service</h3>
+            <p>Connect GitHub, set rollout rules, and view live metrics from the single console shown in the hero.</p>
+            <a href="#">View guide →</a>
+          </article>
+          <article class="doc-card">
+            <h3>Managed PostgreSQL</h3>
+            <p>Spin up HA clusters, manage snapshots, and stream data to analytics.</p>
+            <a href="#">View guide →</a>
+          </article>
+          <article class="doc-card">
+            <h3>AI-ready GPU islands</h3>
+            <p>Request GPU-backed capacity, share notebooks, and deploy inference endpoints.</p>
+            <a href="#">View guide →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Reference</p>
+        <h2>APIs copied from the screenshot table</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Authentication</h3>
+            <p>Use ICS API keys, OAuth apps, or workload identities. Choose region per call.</p>
+          </article>
+          <article class="card">
+            <h3>Deployments API</h3>
+            <p>Create releases, monitor rollout status, and trigger rollbacks.</p>
+          </article>
+          <article class="card">
+            <h3>Monitoring API</h3>
+            <p>Query metrics, logs, traces, and spend to embed in your internal dashboards.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <div class="cta-band">
+        <div>
+          <p class="eyebrow" style="color:#ffe5cf;">Need more?</p>
+          <h2>Talk to the team behind the docs.</h2>
+          <p>The docs CTA mirrors your screenshot’s “Join office hours” band.</p>
+        </div>
+        <div class="cta-group">
+          <a class="btn btn-ghost" href="support.html">Ask support</a>
+          <a class="btn btn-secondary" href="company.html">Meet the team</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4>Island Computing Services</h4>
+        <p>© 2025 ICS. Simplifying Computing.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="pricing.html#compute">Compute</a>
+        <a href="pricing.html#infra">Infra &amp; DevOps</a>
+        <a href="pricing.html#data">Data</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="docs.html">Docs</a>
+        <a href="blog.html">Blog</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="company.html">About</a>
+        <a href="support.html#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
       </div>
     </footer>
 

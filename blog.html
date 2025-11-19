@@ -1,127 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Island Computing Blog</title>
-    <link rel="stylesheet" href="assets/styles.css" />
-  </head>
-  <body>
-    <header class="global-header">
-      <div class="nav-shell">
-        <a class="logo" href="index.html">
-          <span class="logo-mark">I</span>
-          Island
-        </a>
-        <nav class="primary-nav">
-          <a href="pricing.html">Product</a>
-          <a href="docs.html">Docs</a>
-          <a href="company.html">Company</a>
-          <a class="active" href="blog.html">Blog</a>
-          <a href="support.html">Support</a>
-        </nav>
-        <div class="nav-cta">
-          <a class="link" href="pricing.html">Pricing</a>
-          <a class="btn ghost" href="demo.html">Request demo</a>
-          <a class="btn primary" href="login.html">Launch console</a>
-        </div>
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-      </div>
-      <div class="mobile-menu">
-        <a href="pricing.html">Product</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICS Blog</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header>
+    <div class="nav-wrapper">
+      <a class="logo" href="index.html">
+        <img src="assets/logo.svg" alt="ICS logo">
+        Island Computing Services
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
         <a href="docs.html">Docs</a>
+        <a class="active" href="blog.html">Blog</a>
         <a href="company.html">Company</a>
         <a class="active" href="blog.html">Blog</a>
         <a href="support.html">Support</a>
-        <a class="btn ghost" href="demo.html">Request demo</a>
-        <a class="btn primary" href="login.html">Launch console</a>
+      </nav>
+      <div class="utility-links">
+        <span>Region • India</span>
+        <a href="support.html">Help</a>
       </div>
-    </header>
+      <div class="cta-group">
+        <a class="btn btn-outline" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="demo.html">Request demo</a>
+      </div>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="docs.html">Docs</a>
+      <a href="blog.html">Blog</a>
+      <a href="company.html">Company</a>
+      <a href="support.html">Support</a>
+      <a href="login.html">Sign in</a>
+      <a class="btn btn-primary" href="demo.html">Request demo</a>
+    </div>
+  </header>
 
-    <main>
-      <div class="page-shell">
-        <section class="hero">
+  <main>
+    <div class="page-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Stories</p>
+          <h1>News and analysis from the ICS team.</h1>
+          <p>This layout mirrors the blog screenshot: a featured story left, list of articles right, plus categories.</p>
           <div class="chip-row">
-            <span class="chip">Newsroom</span>
-            <span class="chip">Product stories</span>
-          </div>
-          <h1>The ICS Dispatch</h1>
-          <p>Launches, playbooks, and founder stories from the India-built cloud simplifying computing.</p>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Featured story</h2>
-            <p>Get the highlights from our latest release event.</p>
-          </div>
-          <div class="card blog-card">
-            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80" alt="Launch" />
-            <p class="badge">Launch</p>
-            <h3>Introducing Sovereign Islands for regulated industries</h3>
-            <p>
-              Dedicated regions, compliance-ready guardrails, and AI runtimes purpose-built for
-              India’s most sensitive workloads—all wrapped in a calm Apple-like console.
-            </p>
-            <a class="btn ghost" href="#">Read story</a>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Latest posts</h2>
-            <p>Stay updated on everything happening across Island Computing Services.</p>
-          </div>
-          <div class="grid three-col">
-            <div class="card blog-card">
-              <p class="badge">Customer</p>
-              <h3>How LumenAir personalizes offers in real time</h3>
-              <p>Global airline consolidates four stacks onto ICS to ship AI-native experiences.</p>
-              <a class="btn ghost" href="#">Learn more</a>
-            </div>
-            <div class="card blog-card">
-              <p class="badge">Engineering</p>
-              <h3>Designing India-first runbooks with Apple-level calm</h3>
-              <p>Behind the scenes of our minimalist operations console.</p>
-              <a class="btn ghost" href="#">Learn more</a>
-            </div>
-            <div class="card blog-card">
-              <p class="badge">Leadership</p>
-              <h3>Why trust is the ICS platform’s greatest feature</h3>
-              <p>ICS leadership on sovereignty, governance, and design.</p>
-              <a class="btn ghost" href="#">Learn more</a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-shell">
-        <div class="footer-grid">
-          <div>
-            <strong>Island Computing Services</strong>
-            <p>Simplifying Computing for India-first, AI-native builders.</p>
-          </div>
-          <div>
-            <p>Product</p>
-            <a href="index.html">Overview</a><br />
-            <a href="pricing.html">Pricing</a><br />
-            <a href="demo.html">Demo</a>
-          </div>
-          <div>
-            <p>Company</p>
-            <a href="company.html">About</a><br />
-            <a href="support.html">Contact</a><br />
-            <a href="blog.html">News</a>
-          </div>
-          <div>
-            <p>Resources</p>
-            <a href="docs.html">Docs</a><br />
-            <a href="support.html">Support</a><br />
-            <a href="demo.html">Request demo</a>
+            <span class="chip">Product</span>
+            <span class="chip">AI-native</span>
+            <span class="chip">Founders</span>
+            <span class="chip">Changelog</span>
           </div>
         </div>
-        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
+        <div class="mini-panel">
+          <p class="badge">Featured</p>
+          <h3>Unspoken complexity of building in the cloud</h3>
+          <p>Exactly the headline from your hero slide. We kept the intro copy intact.</p>
+          <a class="btn btn-outline" href="#stories">Read article</a>
+        </div>
+      </section>
+
+      <section class="section" id="stories">
+        <p class="eyebrow">Latest</p>
+        <h2>Copied article titles &amp; blurbs</h2>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <h3><a href="#">Why we’re Simplifying Computing</a></h3>
+            <p>ICS started because cloud tooling became a maze. This piece mirrors the product deck copy.</p>
+            <p class="muted">6 min read · Team ICS</p>
+          </article>
+          <article class="blog-card">
+            <h3><a href="#">Building AI-native workloads without hyperscaler overhead</a></h3>
+            <p>How sovereign infrastructure and transparent billing keep experiments nimble.</p>
+            <p class="muted">8 min read · Platform team</p>
+          </article>
+          <article class="blog-card">
+            <h3><a href="#">From compute islands to trust</a></h3>
+            <p>Exploring the “people + platform” story from your screenshots.</p>
+            <p class="muted">5 min read · Founders</p>
+          </article>
+          <article class="blog-card">
+            <h3><a href="#">Inside the ICS console</a></h3>
+            <p>Walkthrough of workflows, observability, and support channels.</p>
+            <p class="muted">7 min read · Product</p>
+          </article>
+          <article class="blog-card">
+            <h3><a href="#">Why India needs sovereign cloud infra</a></h3>
+            <p>Directly quoting the “India-first” storyline from the slides.</p>
+            <p class="muted">9 min read · Policy</p>
+          </article>
+          <article class="blog-card">
+            <h3><a href="#">ICS changelog</a></h3>
+            <p>Weekly improvements to the console, CLI, and APIs.</p>
+            <p class="muted">Updated weekly</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <div class="cta-band">
+        <div>
+          <p class="eyebrow" style="color:#ffe5cf;">Want to contribute?</p>
+          <h2>Share your story about simplifying computing.</h2>
+          <p>Copied CTA text from the blog slide.</p>
+        </div>
+        <div class="cta-group">
+          <a class="btn btn-ghost" href="support.html">Pitch an article</a>
+          <a class="btn btn-secondary" href="demo.html">Book a live demo</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4>Island Computing Services</h4>
+        <p>© 2025 ICS. Simplifying Computing.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="pricing.html#compute">Compute</a>
+        <a href="pricing.html#infra">Infra &amp; DevOps</a>
+        <a href="pricing.html#data">Data</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="docs.html">Docs</a>
+        <a href="blog.html">Blog</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="company.html">About</a>
+        <a href="support.html#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
       </div>
     </footer>
 
