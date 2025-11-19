@@ -1,172 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ICS Support</title>
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-  <header>
-    <div class="nav-wrapper">
-      <a class="logo" href="index.html">
-        <img src="assets/logo.svg" alt="ICS logo">
-        Island Computing Services
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Island Computing Support</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="nav-shell">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">I</span>
+          Island
+        </a>
+        <nav class="primary-nav">
+          <a href="pricing.html">Product</a>
+          <a href="docs.html">Docs</a>
+          <a href="company.html">Company</a>
+          <a href="blog.html">Blog</a>
+          <a class="active" href="support.html">Support</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="link" href="pricing.html">Pricing</a>
+          <a class="btn ghost" href="demo.html">Request demo</a>
+          <a class="btn primary" href="login.html">Launch console</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+      <div class="mobile-menu">
+        <a href="pricing.html">Product</a>
         <a href="docs.html">Docs</a>
         <a href="company.html">Company</a>
-        <a class="active" href="support.html">Support</a>
-      </nav>
-      <div class="utility-links">
-        <span>Region • India</span>
-        <a href="support.html">Help</a>
-      </div>
-      <div class="cta-group">
-        <a class="btn btn-outline" href="login.html">Sign in</a>
-        <a class="btn btn-primary" href="demo.html">Request demo</a>
-      </div>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="docs.html">Docs</a>
-      <a href="blog.html">Blog</a>
-      <a href="company.html">Company</a>
-      <a href="support.html">Support</a>
-      <a href="login.html">Sign in</a>
-      <a class="btn btn-primary" href="demo.html">Request demo</a>
-    </div>
-  </header>
-
-  <main>
-    <div class="page-shell">
-      <section class="hero">
-        <div>
-          <p class="eyebrow">Support</p>
-          <h1>People + platform, just like in the screenshot.</h1>
-          <p>We recreated the support hero: big headline, 24/7 coverage, live chat, and office hours.</p>
-          <div class="stat-grid">
-            <div class="stat-card">
-              <strong>24/7</strong>
-              <span>Pager coverage for production incidents.</span>
-            </div>
-            <div class="stat-card">
-              <strong>2 hrs</strong>
-              <span>Average response time.</span>
-            </div>
-            <div class="stat-card">
-              <strong>Slack + console</strong>
-              <span>Exactly the channels depicted in your UI.</span>
-            </div>
-          </div>
-        </div>
-        <div class="mini-panel">
-          <div>
-            <span class="badge">Office hours</span>
-            <h3>Weekly sessions</h3>
-            <p>Join ICS engineers live as shown on the support slide.</p>
-          </div>
-          <div>
-            <span class="badge">Support plans</span>
-            <h3>Dedicated TAM</h3>
-            <p>Available for Growth and Enterprise tiers.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <p class="eyebrow">Channels</p>
-        <h2>How to reach us</h2>
-        <div class="support-grid">
-          <article class="support-card">
-            <h3>Console chat</h3>
-            <p>Talk to ICS engineers right from the console.</p>
-          </article>
-          <article class="support-card">
-            <h3>Slack connect</h3>
-            <p>Private channel with your SRE + TAM.</p>
-          </article>
-          <article class="support-card">
-            <h3>Office hours</h3>
-            <p>Live walkthrough every Thursday at 4PM IST.</p>
-          </article>
-          <article class="support-card">
-            <h3>Docs &amp; guides</h3>
-            <p>Searchable knowledge base lifted from the docs screenshot.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="contact">
-        <p class="eyebrow">Contact</p>
-        <h2>Need to raise a ticket?</h2>
-        <div class="form-card">
-          <form>
-            <label for="name">Full name</label>
-            <input id="name" type="text" placeholder="Your name">
-            <label for="email">Work email</label>
-            <input id="email" type="email" placeholder="name@company.com">
-            <label for="team">Team size</label>
-            <select id="team">
-              <option>1-10</option>
-              <option>11-50</option>
-              <option>51-200</option>
-              <option>200+</option>
-            </select>
-            <label for="message">How can we help?</label>
-            <textarea id="message" placeholder="Describe the issue you saw in the console screenshot..."></textarea>
-            <button class="btn btn-primary" type="submit">Submit</button>
-          </form>
-        </div>
-      </section>
-    </div>
-
-    <div class="page-shell">
-      <div class="cta-band">
-        <div>
-          <p class="eyebrow" style="color:#ffe5cf;">Need faster help?</p>
-          <h2>Our SREs sit with your team during onboarding.</h2>
-          <p>This CTA replicates the “People + platform” footer from the support slide.</p>
-        </div>
-        <div class="cta-group">
-          <a class="btn btn-ghost" href="demo.html">Book onboarding</a>
-          <a class="btn btn-secondary" href="login.html">Open support ticket</a>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <h4>Island Computing Services</h4>
-        <p>© 2025 ICS. Simplifying Computing.</p>
-      </div>
-      <div>
-        <h4>Product</h4>
-        <a href="pricing.html#compute">Compute</a>
-        <a href="pricing.html#infra">Infra &amp; DevOps</a>
-        <a href="pricing.html#data">Data</a>
-      </div>
-      <div>
-        <h4>Resources</h4>
-        <a href="docs.html">Docs</a>
         <a href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
+        <a class="active" href="support.html">Support</a>
+        <a class="btn ghost" href="demo.html">Request demo</a>
+        <a class="btn primary" href="login.html">Launch console</a>
       </div>
-      <div>
-        <h4>Company</h4>
-        <a href="company.html">About</a>
-        <a href="support.html#contact">Contact</a>
+    </header>
+
+    <main>
+      <div class="page-shell">
+        <section class="hero">
+          <div class="chip-row">
+            <span class="chip">Help center</span>
+            <span class="chip">24/7 support</span>
+          </div>
+          <h1>Human support for the India-built cloud.</h1>
+          <p>Talk to ICS engineers, success architects, or billing experts anytime.</p>
+          <span class="status-pill">All systems operational</span>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Support channels</h2>
+            <p>Choose how you’d like to engage.</p>
+          </div>
+          <div class="support-grid">
+            <div class="support-card">
+              <h3>Premier</h3>
+              <p>24/7 P1 coverage, 30-minute response, embedded Technical Account Manager.</p>
+            </div>
+            <div class="support-card">
+              <h3>Scale</h3>
+              <p>Dedicated Slack channel, quarterly reviews, architecture guidance.</p>
+            </div>
+            <div class="support-card">
+              <h3>Community</h3>
+              <p>Forums, office hours, and product roadmap briefings.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Submit a request</h2>
+            <p>Our calm, Apple-inspired form keeps things effortless.</p>
+          </div>
+          <div class="card">
+            <form class="form-grid">
+              <input type="text" placeholder="Full name" />
+              <input type="email" placeholder="Work email" />
+              <select>
+                <option>Support plan</option>
+                <option>Premier</option>
+                <option>Scale</option>
+                <option>Community</option>
+              </select>
+              <input type="text" placeholder="Account ID" />
+              <textarea placeholder="How can we help?"></textarea>
+              <button class="btn primary" type="submit">Submit ticket</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="grid two-col">
+            <div class="card">
+              <h3>Incident response</h3>
+              <p>Follow live updates in the ICS trust center and subscribe to alerts.</p>
+            </div>
+            <div class="card">
+              <h3>Contact sales</h3>
+              <p>Looking to upgrade support tiers? Our India-based sales team is ready to help.</p>
+              <a class="btn ghost" href="demo.html">Talk to sales</a>
+            </div>
+          </div>
+        </section>
       </div>
-      <div>
-        <h4>Legal</h4>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-shell">
+        <div class="footer-grid">
+          <div>
+            <strong>Island Computing Services</strong>
+            <p>Simplifying Computing for India-first, AI-native builders.</p>
+          </div>
+          <div>
+            <p>Product</p>
+            <a href="index.html">Overview</a><br />
+            <a href="pricing.html">Pricing</a><br />
+            <a href="demo.html">Demo</a>
+          </div>
+          <div>
+            <p>Support</p>
+            <a href="support.html">Help center</a><br />
+            <a href="docs.html">Documentation</a><br />
+            <a href="demo.html">Contact sales</a>
+          </div>
+          <div>
+            <p>Company</p>
+            <a href="company.html">About</a><br />
+            <a href="blog.html">News</a>
+          </div>
+        </div>
+        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
       </div>
     </footer>
 

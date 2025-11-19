@@ -1,174 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About ICS</title>
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-  <header>
-    <div class="nav-wrapper">
-      <a class="logo" href="index.html">
-        <img src="assets/logo.svg" alt="ICS logo">
-        Island Computing Services
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Island Computing Company</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="nav-shell">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">I</span>
+          Island
+        </a>
+        <nav class="primary-nav">
+          <a href="pricing.html">Product</a>
+          <a href="docs.html">Docs</a>
+          <a class="active" href="company.html">Company</a>
+          <a href="blog.html">Blog</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="link" href="pricing.html">Pricing</a>
+          <a class="btn ghost" href="demo.html">Request demo</a>
+          <a class="btn primary" href="login.html">Launch console</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+      <div class="mobile-menu">
+        <a href="pricing.html">Product</a>
         <a href="docs.html">Docs</a>
         <a class="active" href="company.html">Company</a>
         <a href="blog.html">Blog</a>
-        <a class="active" href="company.html">Company</a>
         <a href="support.html">Support</a>
-      </nav>
-      <div class="utility-links">
-        <span>Region • India</span>
-        <a href="support.html">Help</a>
+        <a class="btn ghost" href="demo.html">Request demo</a>
+        <a class="btn primary" href="login.html">Launch console</a>
       </div>
-      <div class="cta-group">
-        <a class="btn btn-outline" href="login.html">Sign in</a>
-        <a class="btn btn-primary" href="demo.html">Request demo</a>
-      </div>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="docs.html">Docs</a>
-      <a href="blog.html">Blog</a>
-      <a href="company.html">Company</a>
-      <a href="support.html">Support</a>
-      <a href="login.html">Sign in</a>
-      <a class="btn btn-primary" href="demo.html">Request demo</a>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <div class="page-shell">
-      <section class="hero">
-        <div>
-          <p class="eyebrow">Our story</p>
-          <h1>Island Computing Services is the team simplifying computing.</h1>
-          <p>We recreated the About page sections you screenshotted: mission copy, leadership cards, and a trust timeline.</p>
+    <main>
+      <div class="page-shell">
+        <section class="hero">
           <div class="chip-row">
-            <span class="chip">India-first</span>
-            <span class="chip">Sovereign</span>
-            <span class="chip">AI-native</span>
-            <span class="chip">People + platform</span>
+            <span class="chip">About</span>
+            <span class="chip">Mission</span>
+          </div>
+          <h1>The team simplifying computing for India-first builders.</h1>
+          <p>
+            Island Computing Services was founded in Bengaluru to give the 1 lakh+ cloud-native and
+            AI-native startups an opinionated platform that feels as calm as it is powerful.
+          </p>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Mission &amp; values</h2>
+            <p>We pair design rigor with deep infrastructure expertise for local builders.</p>
+          </div>
+          <div class="grid three-col">
+            <div class="card">
+              <h3>Design with intention</h3>
+              <p>Every workflow should feel obvious, with no extra toggles or jargon.</p>
+            </div>
+            <div class="card">
+              <h3>Earn trust daily</h3>
+              <p>Sovereignty, privacy, and governance are first-class features.</p>
+            </div>
+            <div class="card">
+              <h3>Ship together</h3>
+              <p>Product, engineering, and success teams build alongside customers.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Timeline</h2>
+            <p>Key moments from prototype to nationwide platform.</p>
+          </div>
+          <ul class="timeline">
+            <li><strong>2021</strong> — Founded in Bengaluru with a focus on India-built cloud.</li>
+            <li><strong>2022</strong> — Launched compute islands with managed networking.</li>
+            <li><strong>2023</strong> — Added managed databases, CI/CD, and observability.</li>
+            <li><strong>2024</strong> — Introduced Sovereign regions &amp; AI runtimes.</li>
+            <li><strong>2025</strong> — Expanded support teams to Delhi, Mumbai, and Singapore.</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Leadership</h2>
+            <p>Operators who have scaled India-first infrastructure and Apple-grade experiences.</p>
+          </div>
+          <div class="grid three-col">
+            <div class="card">
+              <h3>Aditi Menon</h3>
+              <p>CEO — Former GM at a leading Indian hyperscaler.</p>
+            </div>
+            <div class="card">
+              <h3>Raghav Iyer</h3>
+              <p>CTO — Built large-scale compute and observability platforms.</p>
+            </div>
+            <div class="card">
+              <h3>Emi Banerjee</h3>
+              <p>Chief Design Officer — Led calm enterprise UX at global product teams.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="grid two-col">
+            <div class="card">
+              <h3>Our locations</h3>
+              <p>Bengaluru HQ with hubs in Hyderabad, Delhi, Mumbai, and Singapore.</p>
+            </div>
+            <div class="card">
+              <h3>Join the team</h3>
+              <p>We’re hiring builders obsessed with simplifying computing for this region.</p>
+              <a class="btn ghost" href="support.html">Contact recruiting</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-shell">
+        <div class="footer-grid">
+          <div>
+            <strong>Island Computing Services</strong>
+            <p>Simplifying Computing for India-first, AI-native builders.</p>
+          </div>
+          <div>
+            <p>Product</p>
+            <a href="index.html">Overview</a><br />
+            <a href="pricing.html">Pricing</a><br />
+            <a href="demo.html">Demo</a>
+          </div>
+          <div>
+            <p>Company</p>
+            <a href="company.html">About</a><br />
+            <a href="blog.html">News</a><br />
+            <a href="support.html">Contact</a>
+          </div>
+          <div>
+            <p>Resources</p>
+            <a href="docs.html">Docs</a><br />
+            <a href="support.html">Support</a><br />
+            <a href="demo.html">Request demo</a>
           </div>
         </div>
-        <div class="mini-panel">
-          <span class="badge">Mission</span>
-          <h3>Simplifying Computing</h3>
-          <p>Remove infrastructure friction so builders can focus on products, not plumbing.</p>
-        </div>
-      </section>
-
-      <section class="section">
-        <p class="eyebrow">Founders</p>
-        <h2>People behind the platform</h2>
-        <div class="company-grid">
-          <article class="info-card">
-            <h3>Sana B.</h3>
-            <p>Built large-scale infra at India’s fastest-growing fintechs. Obsessed with reliability and empathy.</p>
-          </article>
-          <article class="info-card">
-            <h3>Raghav M.</h3>
-            <p>Former head of cloud economics at a hyperscaler, now focused on transparent pricing.</p>
-          </article>
-          <article class="info-card">
-            <h3>Priya S.</h3>
-            <p>Led AI platform teams and brings the “AI-native” workflows from your screenshots to life.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="trust">
-        <p class="eyebrow">Values</p>
-        <h2>What we learned while copying the slide content</h2>
-        <div class="cards-grid">
-          <article class="value-card">
-            <h3>People + platform</h3>
-            <p>Pair opinionated software with senior SREs who sit with your team.</p>
-          </article>
-          <article class="value-card">
-            <h3>India-first</h3>
-            <p>Data residency, compliance, and network design tuned for India.</p>
-          </article>
-          <article class="value-card">
-            <h3>Transparency</h3>
-            <p>Clear pricing, visible policies, and no black boxes.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <p class="eyebrow">Milestones</p>
-        <h2>Timeline that matched your deck</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <strong>2019</strong>
-            <p>Research started with founders helping India-first SaaS teams migrate.</p>
-          </div>
-          <div class="timeline-item">
-            <strong>2023</strong>
-            <p>ICS incorporated, first compute islands deployed.</p>
-          </div>
-          <div class="timeline-item">
-            <strong>2024</strong>
-            <p>Managed data, AI-ready GPUs, and observability launched.</p>
-          </div>
-          <div class="timeline-item">
-            <strong>2025</strong>
-            <p>Expanding to multiple regions with the same UI you captured.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="page-shell">
-      <div class="cta-band">
-        <div>
-          <p class="eyebrow" style="color:#ffe5cf;">Join us</p>
-          <h2>Help simplify computing for builders everywhere.</h2>
-          <p>The recruitment CTA mirrors the “We’re hiring” block in your screenshot.</p>
-        </div>
-        <div class="cta-group">
-          <a class="btn btn-ghost" href="support.html#contact">Reach out</a>
-          <a class="btn btn-secondary" href="demo.html">See the product</a>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <h4>Island Computing Services</h4>
-        <p>© 2025 ICS. Simplifying Computing.</p>
-      </div>
-      <div>
-        <h4>Product</h4>
-        <a href="pricing.html#compute">Compute</a>
-        <a href="pricing.html#infra">Infra &amp; DevOps</a>
-        <a href="pricing.html#data">Data</a>
-      </div>
-      <div>
-        <h4>Resources</h4>
-        <a href="docs.html">Docs</a>
-        <a href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="company.html">About</a>
-        <a href="support.html#contact">Contact</a>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
+        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
       </div>
     </footer>
 

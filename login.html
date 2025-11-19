@@ -1,93 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ICS Console Login</title>
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-  <header>
-    <div class="nav-wrapper">
-      <a class="logo" href="index.html">
-        <img src="assets/logo.svg" alt="ICS logo">
-        Island Computing Services
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Island Console Login</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="nav-shell">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">I</span>
+          Island
+        </a>
+        <nav class="primary-nav">
+          <a href="pricing.html">Product</a>
+          <a href="docs.html">Docs</a>
+          <a href="company.html">Company</a>
+          <a href="blog.html">Blog</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn primary" href="login.html">Launch console</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+      <div class="mobile-menu">
+        <a href="pricing.html">Product</a>
         <a href="docs.html">Docs</a>
         <a href="company.html">Company</a>
         <a href="blog.html">Blog</a>
         <a href="support.html">Support</a>
-      </nav>
-      <div class="utility-links">
-        <span>Region • India</span>
-        <a href="support.html">Help</a>
+        <a class="btn primary" href="login.html">Launch console</a>
       </div>
-      <div class="cta-group">
-        <a class="btn btn-outline" href="login.html">Sign in</a>
-        <a class="btn btn-primary" href="demo.html">Request demo</a>
-      </div>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="docs.html">Docs</a>
-      <a href="blog.html">Blog</a>
-      <a href="company.html">Company</a>
-      <a href="support.html">Support</a>
-      <a href="login.html">Sign in</a>
-      <a class="btn btn-primary" href="demo.html">Request demo</a>
-    </div>
-  </header>
+    </header>
 
-  <main class="login-shell">
-    <div class="login-card">
-      <p class="eyebrow">Console</p>
-      <h1>Sign in to ICS</h1>
-      <p>Use your work email or SSO. Layout mirrors the console login screenshot.</p>
-      <form>
-        <label for="login-email">Email</label>
-        <input id="login-email" type="email" placeholder="name@company.com">
-        <label for="login-password">Password</label>
-        <input id="login-password" type="password" placeholder="••••••••">
-        <a href="#" style="color:var(--accent); text-decoration:none; font-weight:600;">Forgot password?</a>
-        <button class="btn btn-primary" type="submit">Sign in</button>
-        <button class="btn btn-outline" type="button">Sign in with SSO</button>
-      </form>
-      <p style="margin-top:1.5rem;">Need access? <a href="demo.html" style="color:var(--accent); font-weight:600;">Request demo</a></p>
-    </div>
-  </main>
+    <main>
+      <div class="page-shell auth-shell">
+        <section class="section">
+          <div class="auth-card">
+            <h2>Sign in to Island Console</h2>
+            <form class="grid" style="gap:1rem;">
+              <input type="email" placeholder="Work email" />
+              <input type="password" placeholder="Password" />
+              <div class="chip-row" style="justify-content:space-between; width:100%;">
+                <label><input type="checkbox" /> Keep me signed in</label>
+                <a href="support.html">Forgot password?</a>
+              </div>
+              <button class="btn primary" type="submit">Sign in</button>
+              <a class="btn ghost" href="demo.html">Need an account? Request access</a>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <h4>Island Computing Services</h4>
-        <p>© 2025 ICS. Simplifying Computing.</p>
-      </div>
-      <div>
-        <h4>Product</h4>
-        <a href="pricing.html#compute">Compute</a>
-        <a href="pricing.html#infra">Infra &amp; DevOps</a>
-        <a href="pricing.html#data">Data</a>
-      </div>
-      <div>
-        <h4>Resources</h4>
-        <a href="docs.html">Docs</a>
-        <a href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="company.html">About</a>
-        <a href="support.html#contact">Contact</a>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
+    <footer class="footer">
+      <div class="footer-shell">
+        <div class="footer-grid">
+          <div>
+            <strong>Island Computing Services</strong>
+            <p>Simplifying Computing for India-first, AI-native builders.</p>
+          </div>
+          <div>
+            <p>Product</p>
+            <a href="index.html">Overview</a><br />
+            <a href="pricing.html">Pricing</a>
+          </div>
+          <div>
+            <p>Support</p>
+            <a href="support.html">Help center</a><br />
+            <a href="docs.html">Docs</a>
+          </div>
+          <div>
+            <p>Company</p>
+            <a href="company.html">About</a><br />
+            <a href="blog.html">News</a>
+          </div>
+        </div>
+        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
       </div>
     </footer>
 

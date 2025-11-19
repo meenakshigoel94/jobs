@@ -1,80 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ICS Pricing</title>
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-  <header>
-    <div class="nav-wrapper">
-      <a class="logo" href="index.html">
-        <img src="assets/logo.svg" alt="ICS logo">
-        Island Computing Services
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a class="active" href="pricing.html">Pricing</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Island Computing Services Pricing</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="nav-shell">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">I</span>
+          Island
+        </a>
+        <nav class="primary-nav">
+          <a class="active" href="pricing.html">Product</a>
+          <a href="docs.html">Docs</a>
+          <a href="company.html">Company</a>
+          <a href="blog.html">Blog</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="link" href="docs.html">Docs</a>
+          <a class="btn ghost" href="demo.html">Request demo</a>
+          <a class="btn primary" href="login.html">Launch console</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+      <div class="mobile-menu">
+        <a class="active" href="pricing.html">Product</a>
         <a href="docs.html">Docs</a>
         <a href="company.html">Company</a>
         <a href="blog.html">Blog</a>
         <a href="support.html">Support</a>
-      </nav>
-      <div class="utility-links">
-        <span>Region • India</span>
-        <a href="support.html">Help</a>
+        <a class="btn ghost" href="demo.html">Request demo</a>
+        <a class="btn primary" href="login.html">Launch console</a>
       </div>
-      <div class="cta-group">
-        <a class="btn btn-outline" href="login.html">Sign in</a>
-        <a class="btn btn-primary" href="demo.html">Request demo</a>
-      </div>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="docs.html">Docs</a>
-      <a href="blog.html">Blog</a>
-      <a href="company.html">Company</a>
-      <a href="support.html">Support</a>
-      <a href="login.html">Sign in</a>
-      <a class="btn btn-primary" href="demo.html">Request demo</a>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <div class="page-shell">
-      <section class="hero">
-        <div>
-          <p class="eyebrow">Transparent billing</p>
-          <h1>Pricing that mirrors the screenshots you provided.</h1>
-          <p>We pulled the same metrics—₹0 surprises, usage-based billing, free migration support—and rebuilt them with live HTML so your marketing site matches the visuals from the deck.</p>
-          <div class="stat-grid">
-            <div class="stat-card">
-              <strong>₹0</strong>
-              <span>Surprise fees. Pay only for the resources you see in the console.</span>
-            </div>
-            <div class="stat-card">
-              <strong>12 months</strong>
-              <span>Founders program with credits &amp; white-glove onboarding.</span>
-            </div>
-            <div class="stat-card">
-              <strong>24/7</strong>
-              <span>Support coverage captured in the support page screenshot.</span>
-            </div>
+    <main>
+      <div class="page-shell">
+        <section class="hero">
+          <div class="chip-row">
+            <span class="chip">Usage-based</span>
+            <span class="chip">Rupee-friendly</span>
+            <span class="chip">No surprise fees</span>
           </div>
-        </div>
-        <div class="mini-panel">
-          <div>
-            <span class="badge">Billing view</span>
-            <h3>Every line item</h3>
-            <p>Compute minutes, storage, CI minutes, network egress, and managed database hours all mirror the tables from the slides.</p>
+          <h1>Only pay for the compute, data, and managed services you use.</h1>
+          <p>
+            ICS pricing mirrors the simplicity of our platform: per-second compute, per-GB storage,
+            and transparent services for CI/CD, observability, and AI runtimes. Everything is quoted
+            in INR with optional USD billing for global subsidiaries.
+          </p>
+          <div class="chip-row">
+            <a class="btn primary" href="demo.html">Talk to sales</a>
+            <a class="btn ghost" href="#pricing">View tiers</a>
           </div>
-          <div>
-            <span class="badge">Credits</span>
-            <h3>Founders beta</h3>
-            <p>₹2L in platform credits plus architecture reviews for early cohorts.</p>
+        </section>
+
+        <section id="pricing" class="section">
+          <div class="section-header">
+            <h2>Plan tiers</h2>
+            <p>Scale from a proof-of-concept to global workloads with identical experiences.</p>
+          </div>
+          <div class="grid three-col">
+            <div class="pricing-card">
+            <p class="badge">Builder</p>
+            <strong>₹95</strong>
+            <span>per island-hour</span>
+            <p>Perfect for early teams consolidating APIs, workers, and databases.</p>
+            <ul>
+              <li>2 islands with autoscale</li>
+              <li>Managed Postgres or Mongo</li>
+              <li>Business-hours support</li>
+            </ul>
+            <a class="btn ghost" href="login.html">Start building</a>
+          </div>
+          <div class="pricing-card">
+            <p class="badge">Scale</p>
+            <strong>₹165</strong>
+            <span>per island-hour</span>
+            <p>Run multi-region APIs, inference, and data with granular guardrails.</p>
+            <ul>
+              <li>5 concurrent islands</li>
+              <li>Advanced CI/CD &amp; observability</li>
+              <li>24/7 priority support</li>
+            </ul>
+            <a class="btn primary" href="demo.html">Contact sales</a>
           </div>
           <div class="pricing-card">
             <p class="badge">Sovereign</p>
@@ -91,155 +103,117 @@
           </div>
         </section>
 
-      <section class="section" id="compute">
-        <p class="eyebrow">Plans</p>
-        <h2>Compute islands</h2>
-        <p>These cards follow the same content hierarchy: tier name, price, what’s included, and CTA.</p>
-        <div class="cards-grid">
-          <article class="plan-card">
-            <p class="badge">Starter</p>
-            <h3>Developer</h3>
-            <p class="muted">₹5,000 / month minimum</p>
-            <ul>
-              <li>2 islands, 8 vCPU, 32GB RAM</li>
-              <li>Managed PostgreSQL + object storage</li>
-              <li>Shared SRE + email support</li>
-            </ul>
-            <a class="btn btn-outline" href="demo.html">Talk to sales</a>
-          </article>
-          <article class="plan-card">
-            <p class="badge">Most popular</p>
-            <h3>Growth</h3>
-            <p class="muted">₹18,000 / month minimum</p>
-            <ul>
-              <li>10 islands, GPU ready pools</li>
-              <li>Dedicated VPC, IAM, SOC2 controls</li>
-              <li>24/7 chat &amp; pager support</li>
-            </ul>
-            <a class="btn btn-primary" href="demo.html">Request proposal</a>
-          </article>
-          <article class="plan-card">
-            <p class="badge">Custom</p>
-            <h3>Enterprise</h3>
-            <p class="muted">Usage-based</p>
-            <ul>
-              <li>Multi-region islands</li>
-              <li>Private GPU clusters</li>
-              <li>Dedicated TAM + migration squad</li>
-            </ul>
-            <a class="btn btn-outline" href="support.html#contact">Contact us</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="infra">
-        <p class="eyebrow">DevOps &amp; automation</p>
-        <h2>Included platform capabilities</h2>
-        <div class="cards-grid">
-          <article class="card">
-            <h3>CI/CD minutes</h3>
-            <p>10k minutes / month bundled, then ₹0.6/min. Autoscale exactly as shown on the pricing slide.</p>
-          </article>
-          <article class="card">
-            <h3>Observability</h3>
-            <p>Logs, metrics, traces stored 30 days. Extra retention ₹3/GB.</p>
-          </article>
-          <article class="card">
-            <h3>Security</h3>
-            <p>Secrets manager, IAM, audit trails and compliance dashboards included.</p>
-          </article>
-          <article class="card">
-            <h3>Professional services</h3>
-            <p>Architecture reviews, migration playbooks, and office hours—copied from the screenshot bullets.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="data">
-        <p class="eyebrow">Data services</p>
-        <h2>Managed databases &amp; AI storage</h2>
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Service</th>
-                <th>Included</th>
-                <th>Usage</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>PostgreSQL</td>
-                <td>2 clusters, 100GB storage</td>
-                <td>₹18/GB beyond quota</td>
-                <td>HA, automated backups, point-in-time restore.</td>
-              </tr>
-              <tr>
-                <td>Redis</td>
-                <td>1 cluster, 25GB memory</td>
-                <td>₹22/GB</td>
-                <td>Multi-AZ replication, TLS, metrics.</td>
-              </tr>
-              <tr>
-                <td>Object storage</td>
-                <td>2TB hot storage</td>
-                <td>₹3/GB + network</td>
-                <td>S3 compatible API, lifecycle policies.</td>
-              </tr>
-              <tr>
-                <td>GPU hours</td>
-                <td>500 A100 hours</td>
-                <td>₹290 / hr</td>
-                <td>Dedicated island, compliance ready.</td>
-              </tr>
-            </tbody>
+        <section class="section">
+          <div class="section-header">
+            <h2>Transparent table</h2>
+            <p>Mix services however you need—everything maps to a single invoice.</p>
+          </div>
+          <table class="table">
+            <tr>
+              <th>Service</th>
+              <th>Unit</th>
+              <th>Included</th>
+              <th>Notes</th>
+            </tr>
+            <tr>
+              <td>Compute islands</td>
+              <td>₹0.04 / second</td>
+              <td>1 Builder island</td>
+              <td>Scale up, down, or pause instantly.</td>
+            </tr>
+            <tr>
+              <td>Storage</td>
+              <td>₹2,200 / TB / month</td>
+              <td>2 TB replicated</td>
+              <td>Automatic multi-zone durability.</td>
+            </tr>
+            <tr>
+              <td>Managed services</td>
+              <td>₹0.25 / 1K ops</td>
+              <td>10M ops</td>
+              <td>CI/CD, catalog, lineage, governance.</td>
+            </tr>
+            <tr>
+              <td>Data sharing</td>
+              <td>Included</td>
+              <td>Unlimited consumers</td>
+              <td>No egress fees.</td>
+            </tr>
+            <tr>
+              <td>AI runtime</td>
+              <td>₹520 / GPU hour</td>
+              <td>100 GPU hours</td>
+              <td>Serverless or reserved notebooks.</td>
+            </tr>
           </table>
-        </div>
-      </section>
-    </div>
+        </section>
 
-    <div class="page-shell">
-      <div class="cta-band">
-        <div>
-          <p class="eyebrow" style="color:#ffe5cf;">Need help deciding?</p>
-          <h2>Run your full stack on ICS with free migration support.</h2>
-          <p>The CTA mirrors the pricing slide with “Request demo” and “Talk to support”.</p>
-        </div>
-        <div class="cta-group">
-          <a class="btn btn-ghost" href="demo.html">Book pricing review</a>
-          <a class="btn btn-secondary" href="support.html#contact">Chat with support</a>
-        </div>
+        <section class="section">
+          <div class="grid two-col">
+            <div class="card">
+              <h3>Optimized commitments</h3>
+              <p>Annual INR or USD commitments unlock up to 35% savings with workload drawdowns.</p>
+            </div>
+            <div class="card">
+              <h3>Enterprise-ready controls</h3>
+              <p>Suspend, monitor, and budget by environment with SOC2- and RBI-ready guardrails.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Pricing questions</h2>
+            <p>Everything you need to decide with confidence.</p>
+          </div>
+          <div class="grid two-col">
+            <div class="faq">
+              <h3>Can I mix Builder and Scale islands?</h3>
+              <p>Yes. Credits pool across projects so you can run mixed workloads without friction.</p>
+            </div>
+            <div class="faq">
+              <h3>How does storage replication work?</h3>
+              <p>ICS keeps two copies inside India by default with optional cross-border replication.</p>
+            </div>
+            <div class="faq">
+              <h3>What’s included in managed services?</h3>
+              <p>CI/CD, catalog, lineage, data quality, and observability run as metered services.</p>
+            </div>
+            <div class="faq">
+              <h3>Do you support private connectivity?</h3>
+              <p>Sovereign plans include MPLS, ExpressRoute, and on-prem peering managed by ICS.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <h4>Island Computing Services</h4>
-        <p>© 2025 ICS. Simplifying Computing.</p>
-      </div>
-      <div>
-        <h4>Product</h4>
-        <a href="pricing.html#compute">Compute</a>
-        <a href="pricing.html#infra">Infra &amp; DevOps</a>
-        <a href="pricing.html#data">Data</a>
-      </div>
-      <div>
-        <h4>Resources</h4>
-        <a href="docs.html">Docs</a>
-        <a href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="company.html">About</a>
-        <a href="support.html#contact">Contact</a>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
+    <footer class="footer">
+      <div class="footer-shell">
+        <div class="footer-grid">
+          <div>
+            <strong>Island Computing Services</strong>
+            <p>Simplifying Computing for India-first, AI-native builders.</p>
+          </div>
+          <div>
+            <p>Product</p>
+            <a href="index.html">Overview</a><br />
+            <a href="pricing.html">Pricing</a><br />
+            <a href="demo.html">Demo</a>
+          </div>
+          <div>
+            <p>Resources</p>
+            <a href="docs.html">Docs</a><br />
+            <a href="support.html">Support</a><br />
+            <a href="blog.html">Blog</a>
+          </div>
+          <div>
+            <p>Company</p>
+            <a href="company.html">About</a><br />
+            <a href="support.html">Contact</a>
+          </div>
+        </div>
+        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
       </div>
     </footer>
 

@@ -1,143 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request an ICS Demo</title>
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-  <header>
-    <div class="nav-wrapper">
-      <a class="logo" href="index.html">
-        <img src="assets/logo.svg" alt="ICS logo">
-        Island Computing Services
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Island Computing Demo</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="nav-shell">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">I</span>
+          Island
+        </a>
+        <nav class="primary-nav">
+          <a href="pricing.html">Product</a>
+          <a href="docs.html">Docs</a>
+          <a href="company.html">Company</a>
+          <a href="blog.html">Blog</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="link" href="pricing.html">Pricing</a>
+          <a class="btn ghost" href="demo.html">Request demo</a>
+          <a class="btn primary" href="login.html">Launch console</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+      <div class="mobile-menu">
+        <a href="pricing.html">Product</a>
         <a href="docs.html">Docs</a>
         <a href="company.html">Company</a>
         <a href="blog.html">Blog</a>
         <a href="support.html">Support</a>
-      </nav>
-      <div class="utility-links">
-        <span>Region • India</span>
-        <a href="support.html">Help</a>
+        <a class="btn ghost" href="demo.html">Request demo</a>
+        <a class="btn primary" href="login.html">Launch console</a>
       </div>
-      <div class="cta-group">
-        <a class="btn btn-outline" href="login.html">Sign in</a>
-        <a class="btn btn-primary" href="demo.html">Request demo</a>
-      </div>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="docs.html">Docs</a>
-      <a href="blog.html">Blog</a>
-      <a href="company.html">Company</a>
-      <a href="support.html">Support</a>
-      <a href="login.html">Sign in</a>
-      <a class="btn btn-primary" href="demo.html">Request demo</a>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <div class="page-shell">
-      <section class="hero">
-        <div>
-          <p class="eyebrow">Live walkthrough</p>
-          <h1>See how ICS simplifies your entire stack.</h1>
-          <p>This page copies the hero and form layout from the “Request demo” slide.</p>
-          <ul>
-            <li>Environment creation, deployments, and data wiring in one view.</li>
-            <li>Cost insights &amp; governance features from the screenshots.</li>
-            <li>Migration assistance + credits for early cohorts.</li>
-          </ul>
-          <div class="cta-group" style="margin-top:1.2rem;">
-            <a class="btn btn-primary" href="pricing.html">View pricing</a>
-            <a class="btn btn-outline" href="support.html">Talk to support</a>
+    <main>
+      <div class="page-shell">
+        <section class="hero">
+          <div class="chip-row">
+            <span class="chip">Live demo</span>
+            <span class="chip">45 minutes</span>
+          </div>
+          <h1>Experience the Island platform with a designer-grade walkthrough.</h1>
+          <p>We’ll tailor the session to your India-first workloads and connect you with a solutions architect.</p>
+        </section>
+
+        <section class="section">
+          <div class="grid two-col">
+            <div class="card">
+              <form class="form-grid">
+                <input type="text" placeholder="Full name" />
+                <input type="email" placeholder="Work email" />
+                <input type="text" placeholder="Company" />
+                <input type="text" placeholder="Job title" />
+                <select>
+                  <option>Workload focus</option>
+                  <option>Compute islands</option>
+                  <option>Managed databases</option>
+                  <option>AI/ML</option>
+                  <option>DevOps &amp; observability</option>
+                </select>
+                <textarea placeholder="What would you like to see?" rows="5"></textarea>
+                <button class="btn primary" type="submit">Book a demo</button>
+              </form>
+            </div>
+            <div class="card">
+              <h3>What to expect</h3>
+              <ul>
+                <li>Preview of the ICS console &amp; governance center</li>
+                <li>Deep dive into rupee-friendly consumption &amp; pricing</li>
+                <li>Architecture review with sovereignty best practices</li>
+                <li>Next steps for pilots and onboarding</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>How it works</h2>
+            <p>We run an Apple-smooth process tuned for India-first builders.</p>
+          </div>
+          <div class="grid three-col">
+            <div class="card">
+              <h3>1. Share goals</h3>
+              <p>Tell us about your team, workloads, and desired outcomes.</p>
+            </div>
+            <div class="card">
+              <h3>2. Curate the console</h3>
+              <p>We configure sample services, data, AI workloads, and guardrails.</p>
+            </div>
+            <div class="card">
+              <h3>3. Launch together</h3>
+              <p>Leave with a tailored plan, pricing, and enablement roadmap.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-shell">
+        <div class="footer-grid">
+          <div>
+            <strong>Island Computing Services</strong>
+            <p>Simplifying Computing for India-first, AI-native builders.</p>
+          </div>
+          <div>
+            <p>Product</p>
+            <a href="index.html">Overview</a><br />
+            <a href="pricing.html">Pricing</a><br />
+            <a href="demo.html">Demo</a>
+          </div>
+          <div>
+            <p>Resources</p>
+            <a href="docs.html">Docs</a><br />
+            <a href="support.html">Support</a><br />
+            <a href="blog.html">Blog</a>
+          </div>
+          <div>
+            <p>Company</p>
+            <a href="company.html">About</a><br />
+            <a href="support.html">Contact</a>
           </div>
         </div>
-        <div class="form-card">
-          <form>
-            <label for="demo-name">Full name</label>
-            <input id="demo-name" type="text" placeholder="Your name">
-            <label for="demo-email">Work email</label>
-            <input id="demo-email" type="email" placeholder="name@company.com">
-            <label for="demo-company">Company</label>
-            <input id="demo-company" type="text" placeholder="Company name">
-            <label for="demo-role">Role</label>
-            <input id="demo-role" type="text" placeholder="CTO, Founder, Platform lead…">
-            <label for="demo-needs">What would you like to see?</label>
-            <textarea id="demo-needs" placeholder="Compute islands, managed DBs, AI pipelines…"></textarea>
-            <button class="btn btn-primary" type="submit">Request demo</button>
-          </form>
-        </div>
-      </section>
-
-      <section class="section">
-        <p class="eyebrow">What we’ll cover</p>
-        <div class="cards-grid">
-          <article class="card">
-            <h3>Opinionated workflows</h3>
-            <p>Step-by-step flows for creating islands, deploying services, and wiring data, just like the slides.</p>
-          </article>
-          <article class="card">
-            <h3>Observability &amp; cost</h3>
-            <p>Live dashboards, audit logs, and transparent billing views.</p>
-          </article>
-          <article class="card">
-            <h3>People + platform</h3>
-            <p>Meet the success team you highlighted in the “people + platform” screenshot.</p>
-          </article>
-        </div>
-      </section>
-    </div>
-
-    <div class="page-shell">
-      <div class="cta-band">
-        <div>
-          <p class="eyebrow" style="color:#ffe5cf;">Need immediate access?</p>
-          <h2>Apply for console beta.</h2>
-          <p>We reused the CTA text referencing “Request beta access”.</p>
-        </div>
-        <div class="cta-group">
-          <a class="btn btn-ghost" href="login.html">Sign in</a>
-          <a class="btn btn-secondary" href="support.html">Email our team</a>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <h4>Island Computing Services</h4>
-        <p>© 2025 ICS. Simplifying Computing.</p>
-      </div>
-      <div>
-        <h4>Product</h4>
-        <a href="pricing.html#compute">Compute</a>
-        <a href="pricing.html#infra">Infra &amp; DevOps</a>
-        <a href="pricing.html#data">Data</a>
-      </div>
-      <div>
-        <h4>Resources</h4>
-        <a href="docs.html">Docs</a>
-        <a href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="company.html">About</a>
-        <a href="support.html#contact">Contact</a>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
+        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
       </div>
     </footer>
 
