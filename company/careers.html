@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers | ICS</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="nav-shell">
+        <a class="logo" href="../index.html"><span class="logo-mark">I</span>Island</a>
+        <nav class="primary-nav">
+          <a href="../products.html">Products</a>
+          <a href="../pricing.html">Pricing</a>
+          <a href="../resources.html">Resources</a>
+          <a class="active" href="../company.html">Company</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="link" href="../signin.html">Sign in</a>
+          <a class="btn primary" href="../signup.html">Try for free</a>
+          <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <a href="../products.html">Products</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../resources.html">Resources</a>
+        <a class="active" href="../company.html">Company</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn ghost" href="../signin.html">Sign in</a>
+        <a class="btn primary" href="../signup.html">Try for free</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-shell">
+        <section class="hero">
+          <div>
+            <h1>Careers at ICS</h1>
+            <p>Help build a simpler, sovereign cloud for developers.</p>
+          </div>
+        </section>
+
+        <section class="section grid two-col">
+          <div class="card">
+            <h3>Senior Backend Engineer</h3>
+            <p>Work on compute islands, observability, and networking automation.</p>
+            <p class="table-note">Location: Bengaluru · Apply: <a href="mailto:careers@islandcloud.in">careers@islandcloud.in</a></p>
+          </div>
+          <div class="card">
+            <h3>Product Designer</h3>
+            <p>Shape a calm, intuitive console for modern engineering teams.</p>
+            <p class="table-note">Location: Remote India · Apply: <a href="mailto:careers@islandcloud.in">careers@islandcloud.in</a></p>
+          </div>
+          <div class="card">
+            <h3>Solutions Architect</h3>
+            <p>Guide customers through migrations and architecture decisions.</p>
+            <p class="table-note">Location: Bengaluru · Apply: <a href="mailto:careers@islandcloud.in">careers@islandcloud.in</a></p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-shell">
+        <div class="footer-grid">
+          <div>
+            <strong>Island Computing Services</strong>
+            <p>Simplifying cloud for India-first, AI-native builders.</p>
+          </div>
+          <div>
+            <p>Products</p>
+            <a href="../products/compute.html">Compute</a><br />
+            <a href="../products/database.html">Database</a><br />
+            <a href="../products/storage.html">Storage</a>
+          </div>
+          <div>
+            <p>Developers</p>
+            <a href="../docs.html">Docs</a><br />
+            <a href="../guides.html">Guides</a><br />
+            <a href="../pricing.html#calculator">Pricing calculator</a><br />
+            <a href="#">API reference</a>
+          </div>
+          <div>
+            <p>Company</p>
+            <a href="about.html">About</a><br />
+            <a href="team.html">Team</a><br />
+            <a href="careers.html">Careers</a><br />
+            <a href="press.html">Press</a><br />
+            <a href="contact.html">Contact</a><br />
+            <a href="trust.html">Trust</a>
+          </div>
+          <div>
+            <p>Ecosystem</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a><br />
+            <a href="https://www.twitter.com" target="_blank" rel="noreferrer">X</a><br />
+            <a href="https://discord.com" target="_blank" rel="noreferrer">Discord</a><br />
+            <a href="../blog.html">Blog</a>
+          </div>
+        </div>
+        <small>© 2024 Island Computing Services · <a href="../terms.html">Terms</a> · <a href="../privacy.html">Privacy</a> · <a href="../cookies.html">Cookies</a> · <a href="../status.html">Status</a></small>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const mobile = document.querySelector('.mobile-menu');
+      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+    </script>
+  </body>
+</html>

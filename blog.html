@@ -3,93 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Island Computing Blog</title>
+    <title>Blog | Island Computing Services</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
     <header class="global-header">
       <div class="nav-shell">
-        <a class="logo" href="index.html">
-          <span class="logo-mark">I</span>
-          Island
-        </a>
+        <a class="logo" href="index.html"><span class="logo-mark">I</span>Island</a>
         <nav class="primary-nav">
-          <a href="pricing.html">Product</a>
-          <a href="docs.html">Docs</a>
+          <a href="products.html">Products</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="resources.html" class="active">Resources</a>
           <a href="company.html">Company</a>
-          <a class="active" href="blog.html">Blog</a>
-          <a href="support.html">Support</a>
+          <a href="company/contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-          <a class="link" href="pricing.html">Pricing</a>
-          <a class="btn ghost" href="demo.html">Request demo</a>
-          <a class="btn primary" href="login.html">Launch console</a>
+          <a class="link" href="signin.html">Sign in</a>
+          <a class="btn primary" href="signup.html">Try for free</a>
+          <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
       </div>
       <div class="mobile-menu">
-        <a href="pricing.html">Product</a>
-        <a href="docs.html">Docs</a>
+        <a href="products.html">Products</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="resources.html" class="active">Resources</a>
         <a href="company.html">Company</a>
-        <a class="active" href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
-        <a class="btn ghost" href="demo.html">Request demo</a>
-        <a class="btn primary" href="login.html">Launch console</a>
+        <a href="company/contact.html">Contact</a>
+        <a class="btn ghost" href="signin.html">Sign in</a>
+        <a class="btn primary" href="signup.html">Try for free</a>
       </div>
     </header>
 
     <main>
       <div class="page-shell">
         <section class="hero">
-          <div class="chip-row">
-            <span class="chip">Newsroom</span>
-            <span class="chip">Product stories</span>
-          </div>
-          <h1>The ICS Dispatch</h1>
-          <p>Launches, playbooks, and founder stories from the India-built cloud simplifying computing.</p>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Featured story</h2>
-            <p>Get the highlights from our latest release event.</p>
-          </div>
-          <div class="card blog-card">
-            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80" alt="Launch" />
-            <p class="badge">Launch</p>
-            <h3>Introducing Sovereign Islands for regulated industries</h3>
-            <p>
-              Dedicated regions, compliance-ready guardrails, and AI runtimes purpose-built for
-              India’s most sensitive workloads—all wrapped in a calm Apple-like console.
-            </p>
-            <a class="btn ghost" href="#">Read story</a>
+          <div>
+            <h1>ICS Blog</h1>
+            <p>Stories from building a sovereign, developer-first cloud in India.</p>
           </div>
         </section>
 
-        <section class="section">
-          <div class="section-header">
-            <h2>Latest posts</h2>
-            <p>Stay updated on everything happening across Island Computing Services.</p>
+        <section class="section grid two-col">
+          <div class="card">
+            <p class="badge">Narrative</p>
+            <h3>Why we built ICS for India-first builders</h3>
+            <p>ICS founders on simplifying cloud for startups and subsidiaries expanding across India.</p>
+            <p class="table-note">August 2024 · ICS origin</p>
           </div>
-          <div class="grid three-col">
-            <div class="card blog-card">
-              <p class="badge">Customer</p>
-              <h3>How LumenAir personalizes offers in real time</h3>
-              <p>Global airline consolidates four stacks onto ICS to ship AI-native experiences.</p>
-              <a class="btn ghost" href="#">Learn more</a>
-            </div>
-            <div class="card blog-card">
-              <p class="badge">Engineering</p>
-              <h3>Designing India-first runbooks with Apple-level calm</h3>
-              <p>Behind the scenes of our minimalist operations console.</p>
-              <a class="btn ghost" href="#">Learn more</a>
-            </div>
-            <div class="card blog-card">
-              <p class="badge">Leadership</p>
-              <h3>Why trust is the ICS platform’s greatest feature</h3>
-              <p>ICS leadership on sovereignty, governance, and design.</p>
-              <a class="btn ghost" href="#">Learn more</a>
-            </div>
+          <div class="card">
+            <p class="badge">Product</p>
+            <h3>Simplifying compute with islands</h3>
+            <p>How islands bundle networking, security, and observability so teams ship faster.</p>
+            <p class="table-note">July 2024 · Compute</p>
+          </div>
+          <div class="card">
+            <p class="badge">Guides</p>
+            <h3>Run dev, stage, prod without the sprawl</h3>
+            <p>Use ICS guardrails to separate environments while keeping costs predictable.</p>
+            <p class="table-note">June 2024 · Guides</p>
+          </div>
+          <div class="card">
+            <p class="badge">Ecosystem</p>
+            <h3>Building with the ICS community</h3>
+            <p>How to join Discord, share feedback, and shape the roadmap.</p>
+            <p class="table-note">May 2024 · Community</p>
           </div>
         </section>
       </div>
@@ -100,28 +77,39 @@
         <div class="footer-grid">
           <div>
             <strong>Island Computing Services</strong>
-            <p>Simplifying Computing for India-first, AI-native builders.</p>
+            <p>Simplifying cloud for India-first, AI-native builders.</p>
           </div>
           <div>
-            <p>Product</p>
-            <a href="index.html">Overview</a><br />
-            <a href="pricing.html">Pricing</a><br />
-            <a href="demo.html">Demo</a>
+            <p>Products</p>
+            <a href="products/compute.html">Compute</a><br />
+            <a href="products/database.html">Database</a><br />
+            <a href="products/storage.html">Storage</a>
+          </div>
+          <div>
+            <p>Developers</p>
+            <a href="docs.html">Docs</a><br />
+            <a href="guides.html">Guides</a><br />
+            <a href="pricing.html#calculator">Pricing calculator</a><br />
+            <a href="#">API reference</a>
           </div>
           <div>
             <p>Company</p>
-            <a href="company.html">About</a><br />
-            <a href="support.html">Contact</a><br />
-            <a href="blog.html">News</a>
+            <a href="company/about.html">About</a><br />
+            <a href="company/team.html">Team</a><br />
+            <a href="company/careers.html">Careers</a><br />
+            <a href="company/press.html">Press</a><br />
+            <a href="company/contact.html">Contact</a><br />
+            <a href="company/trust.html">Trust</a>
           </div>
           <div>
-            <p>Resources</p>
-            <a href="docs.html">Docs</a><br />
-            <a href="support.html">Support</a><br />
-            <a href="demo.html">Request demo</a>
+            <p>Ecosystem</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a><br />
+            <a href="https://www.twitter.com" target="_blank" rel="noreferrer">X</a><br />
+            <a href="https://discord.com" target="_blank" rel="noreferrer">Discord</a><br />
+            <a href="blog.html">Blog</a>
           </div>
         </div>
-        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
+        <small>© 2024 Island Computing Services · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="status.html">Status</a></small>
       </div>
     </footer>
 

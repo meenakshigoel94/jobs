@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Island Computing Services Pricing</title>
+    <title>Pricing | Island Computing Services</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -14,174 +14,150 @@
           Island
         </a>
         <nav class="primary-nav">
-          <a class="active" href="pricing.html">Product</a>
-          <a href="docs.html">Docs</a>
+          <a href="products.html">Products</a>
+          <a class="active" href="pricing.html">Pricing</a>
+          <a href="resources.html">Resources</a>
           <a href="company.html">Company</a>
-          <a href="blog.html">Blog</a>
-          <a href="support.html">Support</a>
+          <a href="company/contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-          <a class="link" href="docs.html">Docs</a>
-          <a class="btn ghost" href="demo.html">Request demo</a>
-          <a class="btn primary" href="login.html">Launch console</a>
+          <a class="link" href="signin.html">Sign in</a>
+          <a class="btn primary" href="signup.html">Try for free</a>
+          <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
       </div>
       <div class="mobile-menu">
-        <a class="active" href="pricing.html">Product</a>
-        <a href="docs.html">Docs</a>
+        <a href="products.html">Products</a>
+        <a class="active" href="pricing.html">Pricing</a>
+        <a href="resources.html">Resources</a>
         <a href="company.html">Company</a>
-        <a href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
-        <a class="btn ghost" href="demo.html">Request demo</a>
-        <a class="btn primary" href="login.html">Launch console</a>
+        <a href="company/contact.html">Contact</a>
+        <a class="btn ghost" href="signin.html">Sign in</a>
+        <a class="btn primary" href="signup.html">Try for free</a>
       </div>
     </header>
 
     <main>
       <div class="page-shell">
         <section class="hero">
-          <div class="chip-row">
-            <span class="chip">Usage-based</span>
-            <span class="chip">Rupee-friendly</span>
-            <span class="chip">No surprise fees</span>
-          </div>
-          <h1>Only pay for the compute, data, and managed services you use.</h1>
-          <p>
-            ICS pricing mirrors the simplicity of our platform: per-second compute, per-GB storage,
-            and transparent services for CI/CD, observability, and AI runtimes. Everything is quoted
-            in INR with optional USD billing for global subsidiaries.
-          </p>
-          <div class="chip-row">
-            <a class="btn primary" href="demo.html">Talk to sales</a>
-            <a class="btn ghost" href="#pricing">View tiers</a>
+          <div>
+            <h1>Transparent pricing for predictable cloud bills.</h1>
+            <p>Simple per-unit pricing across compute, database, and storage with no surprise fees.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#calculator">Estimate cost</a>
+              <a class="btn ghost" href="demo.html">Talk to sales</a>
+            </div>
           </div>
         </section>
 
-        <section id="pricing" class="section">
+        <section class="section" id="compute">
           <div class="section-header">
-            <h2>Plan tiers</h2>
-            <p>Scale from a proof-of-concept to global workloads with identical experiences.</p>
-          </div>
-          <div class="grid three-col">
-            <div class="pricing-card">
-            <p class="badge">Builder</p>
-            <strong>₹95</strong>
-            <span>per island-hour</span>
-            <p>Perfect for early teams consolidating APIs, workers, and databases.</p>
-            <ul>
-              <li>2 islands with autoscale</li>
-              <li>Managed Postgres or Mongo</li>
-              <li>Business-hours support</li>
-            </ul>
-            <a class="btn ghost" href="login.html">Start building</a>
-          </div>
-          <div class="pricing-card">
-            <p class="badge">Scale</p>
-            <strong>₹165</strong>
-            <span>per island-hour</span>
-            <p>Run multi-region APIs, inference, and data with granular guardrails.</p>
-            <ul>
-              <li>5 concurrent islands</li>
-              <li>Advanced CI/CD &amp; observability</li>
-              <li>24/7 priority support</li>
-            </ul>
-            <a class="btn primary" href="demo.html">Contact sales</a>
-          </div>
-          <div class="pricing-card">
-            <p class="badge">Sovereign</p>
-            <strong>Custom</strong>
-            <span>annual commitment</span>
-            <p>Dedicated regions, private connectivity, and AI workload credits for regulated orgs.</p>
-            <ul>
-              <li>Unlimited islands</li>
-              <li>Private MPLS &amp; Express routes</li>
-              <li>Embedded compliance desk</li>
-            </ul>
-            <a class="btn ghost" href="demo.html">Chat with us</a>
-          </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Transparent table</h2>
-            <p>Mix services however you need—everything maps to a single invoice.</p>
+            <h2>Compute pricing</h2>
+            <p>Per-second billing across general, compute+, and GPU profiles.</p>
           </div>
           <table class="table">
-            <tr>
-              <th>Service</th>
-              <th>Unit</th>
-              <th>Included</th>
-              <th>Notes</th>
-            </tr>
-            <tr>
-              <td>Compute islands</td>
-              <td>₹0.04 / second</td>
-              <td>1 Builder island</td>
-              <td>Scale up, down, or pause instantly.</td>
-            </tr>
-            <tr>
-              <td>Storage</td>
-              <td>₹2,200 / TB / month</td>
-              <td>2 TB replicated</td>
-              <td>Automatic multi-zone durability.</td>
-            </tr>
-            <tr>
-              <td>Managed services</td>
-              <td>₹0.25 / 1K ops</td>
-              <td>10M ops</td>
-              <td>CI/CD, catalog, lineage, governance.</td>
-            </tr>
-            <tr>
-              <td>Data sharing</td>
-              <td>Included</td>
-              <td>Unlimited consumers</td>
-              <td>No egress fees.</td>
-            </tr>
-            <tr>
-              <td>AI runtime</td>
-              <td>₹520 / GPU hour</td>
-              <td>100 GPU hours</td>
-              <td>Serverless or reserved notebooks.</td>
-            </tr>
+            <tr><th>Tier</th><th>vCPU</th><th>RAM</th><th>Price</th><th>Notes</th></tr>
+            <tr><td>General</td><td>1-16</td><td>2-64 GB</td><td>₹2.6 / hour</td><td>Balanced for APIs and workers</td></tr>
+            <tr><td>Compute+</td><td>2-32</td><td>4-128 GB</td><td>₹3.6 / hour</td><td>Higher network and SLO dashboards</td></tr>
+            <tr><td>GPU</td><td>1-8 GPU</td><td>16-96 GB</td><td>₹520 / GPU hour</td><td>Inference and fine-tuning friendly</td></tr>
           </table>
         </section>
 
-        <section class="section">
-          <div class="grid two-col">
-            <div class="card">
-              <h3>Optimized commitments</h3>
-              <p>Annual INR or USD commitments unlock up to 35% savings with workload drawdowns.</p>
+        <section class="section" id="database">
+          <div class="section-header">
+            <h2>Database pricing</h2>
+            <p>Managed engines with backups, replicas, and PITR included.</p>
+          </div>
+          <table class="table">
+            <tr><th>Plan</th><th>vCPU</th><th>RAM</th><th>Storage</th><th>Price</th></tr>
+            <tr><td>Starter</td><td>2</td><td>8 GB</td><td>100 GB</td><td>₹1,200 / month</td></tr>
+            <tr><td>Growth</td><td>4</td><td>16 GB</td><td>500 GB</td><td>₹4,800 / month</td></tr>
+            <tr><td>Enterprise</td><td>8+</td><td>32+ GB</td><td>1 TB+</td><td>Custom with HA</td></tr>
+          </table>
+        </section>
+
+        <section class="section" id="storage">
+          <div class="section-header">
+            <h2>Storage pricing</h2>
+            <p>Durable, redundant storage with straightforward egress allowances.</p>
+          </div>
+          <table class="table">
+            <tr><th>Type</th><th>Unit</th><th>Price</th><th>Egress</th></tr>
+            <tr><td>Block</td><td>GB / month</td><td>₹5</td><td>Included inside ICS</td></tr>
+            <tr><td>Object</td><td>GB / month</td><td>₹2.5</td><td>5% included, then ₹4/GB</td></tr>
+            <tr><td>Archive</td><td>GB / month</td><td>₹0.8</td><td>Pay as you retrieve</td></tr>
+          </table>
+        </section>
+
+        <section class="section" id="calculator">
+          <div class="section-header">
+            <h2>Pricing calculator</h2>
+            <p>Estimate your monthly ICS bill with a few inputs.</p>
+          </div>
+          <div class="card">
+            <div class="inline-form">
+              <label>vCPUs per month<input type="number" id="calc-vcpu" value="160" min="0" /></label>
+              <label>RAM per month (GB)<input type="number" id="calc-ram" value="320" min="0" /></label>
+              <label>Storage (GB)<input type="number" id="calc-storage" value="500" min="0" /></label>
+              <label>Egress (GB)<input type="number" id="calc-egress" value="100" min="0" /></label>
             </div>
-            <div class="card">
-              <h3>Enterprise-ready controls</h3>
-              <p>Suspend, monitor, and budget by environment with SOC2- and RBI-ready guardrails.</p>
+            <div class="section-header" style="margin-top:1rem;">
+              <h3 id="calc-total">Estimated monthly total: ₹0</h3>
+              <p class="table-note">Compute assumed at ₹2.6/vCPU hr, RAM ₹0.5/GB hr, storage at ₹2.5/GB/mo, egress ₹4/GB after 5% included.</p>
+            </div>
+            <div class="cta-actions">
+              <a class="btn primary" href="signup.html">Start for free</a>
+              <a class="btn ghost" href="demo.html">Talk to us</a>
             </div>
           </div>
         </section>
 
         <section class="section">
+          <div class="card">
+            <h3>Free credits / free tier</h3>
+            <p>New accounts receive ₹18,000 in launch credits plus 2 months of Builder support.</p>
+            <ul>
+              <li>1 general compute island free for 30 days</li>
+              <li>25 GB managed database storage</li>
+              <li>100 GB object storage with included egress</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
           <div class="section-header">
-            <h2>Pricing questions</h2>
-            <p>Everything you need to decide with confidence.</p>
+            <h2>Pricing FAQ</h2>
+            <p>Clear answers so you can budget confidently.</p>
           </div>
           <div class="grid two-col">
             <div class="faq">
-              <h3>Can I mix Builder and Scale islands?</h3>
-              <p>Yes. Credits pool across projects so you can run mixed workloads without friction.</p>
+              <h3>Do you charge for stopped islands?</h3>
+              <p>Stopped islands only incur storage charges; compute pauses immediately.</p>
             </div>
             <div class="faq">
-              <h3>How does storage replication work?</h3>
-              <p>ICS keeps two copies inside India by default with optional cross-border replication.</p>
+              <h3>How does egress work?</h3>
+              <p>Intra-ICS traffic is free. External egress includes a 5% allowance then per-GB pricing.</p>
             </div>
             <div class="faq">
-              <h3>What’s included in managed services?</h3>
-              <p>CI/CD, catalog, lineage, data quality, and observability run as metered services.</p>
+              <h3>Can I mix plans?</h3>
+              <p>Yes. Compute and database tiers can be combined; billing is prorated.</p>
             </div>
             <div class="faq">
-              <h3>Do you support private connectivity?</h3>
-              <p>Sovereign plans include MPLS, ExpressRoute, and on-prem peering managed by ICS.</p>
+              <h3>Is support included?</h3>
+              <p>Builder includes business hours support. Scale and Sovereign include 24/7 coverage.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-band">
+            <div>
+              <h3>Estimate with us</h3>
+              <p>Share your architecture and we will return a tailored ICS bill of materials.</p>
+            </div>
+            <div class="cta-actions">
+              <a class="btn primary" href="#calculator">Estimate cost</a>
+              <a class="btn ghost" href="demo.html">Talk to us</a>
             </div>
           </div>
         </section>
@@ -193,27 +169,39 @@
         <div class="footer-grid">
           <div>
             <strong>Island Computing Services</strong>
-            <p>Simplifying Computing for India-first, AI-native builders.</p>
+            <p>Simplifying cloud for India-first, AI-native builders.</p>
           </div>
           <div>
-            <p>Product</p>
-            <a href="index.html">Overview</a><br />
-            <a href="pricing.html">Pricing</a><br />
-            <a href="demo.html">Demo</a>
+            <p>Products</p>
+            <a href="products/compute.html">Compute</a><br />
+            <a href="products/database.html">Database</a><br />
+            <a href="products/storage.html">Storage</a>
           </div>
           <div>
-            <p>Resources</p>
+            <p>Developers</p>
             <a href="docs.html">Docs</a><br />
-            <a href="support.html">Support</a><br />
-            <a href="blog.html">Blog</a>
+            <a href="guides.html">Guides</a><br />
+            <a href="#calculator">Pricing calculator</a><br />
+            <a href="#">API reference</a>
           </div>
           <div>
             <p>Company</p>
-            <a href="company.html">About</a><br />
-            <a href="support.html">Contact</a>
+            <a href="company/about.html">About</a><br />
+            <a href="company/team.html">Team</a><br />
+            <a href="company/careers.html">Careers</a><br />
+            <a href="company/press.html">Press</a><br />
+            <a href="company/contact.html">Contact</a><br />
+            <a href="company/trust.html">Trust</a>
+          </div>
+          <div>
+            <p>Ecosystem</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a><br />
+            <a href="https://www.twitter.com" target="_blank" rel="noreferrer">X</a><br />
+            <a href="https://discord.com" target="_blank" rel="noreferrer">Discord</a><br />
+            <a href="blog.html">Blog</a>
           </div>
         </div>
-        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
+        <small>© 2024 Island Computing Services · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="status.html">Status</a></small>
       </div>
     </footer>
 
@@ -221,6 +209,24 @@
       const toggle = document.querySelector('.menu-toggle');
       const mobile = document.querySelector('.mobile-menu');
       toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+
+      const vcpu = document.getElementById('calc-vcpu');
+      const ram = document.getElementById('calc-ram');
+      const storage = document.getElementById('calc-storage');
+      const egress = document.getElementById('calc-egress');
+      const totalLabel = document.getElementById('calc-total');
+      const updateCalc = () => {
+        const vcpuCost = (Number(vcpu.value) || 0) * 2.6;
+        const ramCost = (Number(ram.value) || 0) * 0.5;
+        const storageCost = (Number(storage.value) || 0) * 2.5;
+        const egressAllowance = (Number(storage.value) || 0) * 0.05;
+        const billableEgress = Math.max((Number(egress.value) || 0) - egressAllowance, 0);
+        const egressCost = billableEgress * 4;
+        const total = Math.round((vcpuCost + ramCost + storageCost + egressCost) * 100) / 100;
+        totalLabel.textContent = `Estimated monthly total: ₹${total.toLocaleString('en-IN')}`;
+      };
+      [vcpu, ram, storage, egress].forEach((input) => input?.addEventListener('input', updateCalc));
+      updateCalc();
     </script>
   </body>
 </html>

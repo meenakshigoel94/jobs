@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in | ICS</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="nav-shell">
+        <a class="logo" href="index.html"><span class="logo-mark">I</span>Island</a>
+        <nav class="primary-nav">
+          <a href="products.html">Products</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="resources.html">Resources</a>
+          <a href="company.html">Company</a>
+          <a href="company/contact.html">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn primary" href="signup.html">Try for free</a>
+          <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <a href="products.html">Products</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="resources.html">Resources</a>
+        <a href="company.html">Company</a>
+        <a href="company/contact.html">Contact</a>
+        <a class="btn primary" href="signup.html">Try for free</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-shell" style="max-width:560px;">
+        <section class="hero">
+          <div>
+            <h1>Sign in</h1>
+            <p>Access your ICS console.</p>
+            <form class="inline-form">
+              <label>Email<input type="email" /></label>
+              <label>Password<input type="password" /></label>
+              <div class="form-actions">
+                <button class="btn primary" type="button">Sign in</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-shell">
+        <small>© 2024 Island Computing Services</small>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const mobile = document.querySelector('.mobile-menu');
+      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+    </script>
+  </body>
+</html>
