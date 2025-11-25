@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers at ICS</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="nav-shell">
+        <a class="logo" href="../index.html">
+          <span class="logo-mark">I</span>
+          Island Computing Services
+        </a>
+        <nav class="primary-nav">
+          <a href="../products.html">Products</a>
+          <a href="../pricing.html">Pricing</a>
+          <a href="../resources.html">Resources</a>
+          <a class="active" href="../company.html">Company</a>
+          <a href="../company/contact.html">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="link" href="../signin.html">Sign in</a>
+          <a class="btn primary" href="../signup.html">Try for free</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+      <div class="mobile-menu">
+        <a href="../products.html">Products</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../company.html">Company</a>
+        <a href="../company/contact.html">Contact</a>
+        <a class="btn ghost" href="../signin.html">Sign in</a>
+        <a class="btn primary" href="../signup.html">Try for free</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-shell">
+        <section class="section">
+          <div class="section-header">
+            <h1>Careers</h1>
+            <p class="section-intro">Join us to build a modern, India-first cloud for developers.</p>
+          </div>
+          <div class="grid two-col">
+            <div class="card">
+              <p class="badge">Engineering</p>
+              <h3>Platform Engineer</h3>
+              <p>Build the control plane powering compute islands and networking.</p>
+              <p class="muted">Bengaluru · Full-time</p>
+              <a class="btn ghost" href="mailto:careers@ics.cloud?subject=Platform%20Engineer">Apply</a>
+            </div>
+            <div class="card">
+              <p class="badge">Product</p>
+              <h3>Product Manager, Developer Experience</h3>
+              <p>Shape the console, docs, and workflows that developers touch daily.</p>
+              <p class="muted">Remote India · Full-time</p>
+              <a class="btn ghost" href="mailto:careers@ics.cloud?subject=Product%20Manager">Apply</a>
+            </div>
+            <div class="card">
+              <p class="badge">Go To Market</p>
+              <h3>Solutions Engineer</h3>
+              <p>Guide customers through architecture decisions and migrations.</p>
+              <p class="muted">Bengaluru · Full-time</p>
+              <a class="btn ghost" href="mailto:careers@ics.cloud?subject=Solutions%20Engineer">Apply</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-shell">
+        <div class="footer-columns">
+          <div>
+            <strong>Island Computing Services</strong>
+            <p>Simplifying cloud for India-first, AI-native builders.</p>
+          </div>
+          <div>
+            <p>Products</p>
+            <a href="../products/compute.html">Compute</a><br />
+            <a href="../products/database.html">Database</a><br />
+            <a href="../products/storage.html">Storage</a>
+          </div>
+          <div>
+            <p>Developers</p>
+            <a href="../docs.html">Docs</a><br />
+            <a href="../guides.html">Guides</a><br />
+            <a href="../pricing.html">Pricing calculator</a><br />
+            <a href="#">API (coming soon)</a>
+          </div>
+          <div>
+            <p>Company</p>
+            <a href="../company/about.html">About</a><br />
+            <a href="../company/team.html">Team</a><br />
+            <a href="../company/careers.html">Careers</a><br />
+            <a href="../company/press.html">Press</a><br />
+            <a href="../company/contact.html">Contact</a><br />
+            <a href="../company/trust.html">Trust</a>
+          </div>
+          <div>
+            <p>Ecosystem</p>
+            <a href="../community.html">Community</a><br />
+            <a href="../blog.html">Blog</a><br />
+            <a href="#">LinkedIn</a><br />
+            <a href="#">X</a><br />
+            <a href="#">Discord</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2024 Island Computing Services.</span>
+          <div class="chip-row">
+            <a href="../terms.html">Terms</a>
+            <a href="../privacy.html">Privacy</a>
+            <a href="../cookies.html">Cookies</a>
+            <a href="../status.html">Status</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const mobile = document.querySelector('.mobile-menu');
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>

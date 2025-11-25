@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Island Computing Docs</title>
+    <title>ICS Docs</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -11,152 +11,133 @@
       <div class="nav-shell">
         <a class="logo" href="index.html">
           <span class="logo-mark">I</span>
-          Island
+          Island Computing Services
         </a>
         <nav class="primary-nav">
-          <a href="pricing.html">Product</a>
-          <a class="active" href="docs.html">Docs</a>
+          <a href="products.html">Products</a>
+          <a href="pricing.html">Pricing</a>
+          <a class="active" href="resources.html">Resources</a>
           <a href="company.html">Company</a>
-          <a href="blog.html">Blog</a>
-          <a href="support.html">Support</a>
+          <a href="company/contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-          <a class="link" href="pricing.html">Pricing</a>
-          <a class="btn ghost" href="demo.html">Request demo</a>
-          <a class="btn primary" href="login.html">Launch console</a>
+          <a class="link" href="signin.html">Sign in</a>
+          <a class="btn primary" href="signup.html">Try for free</a>
         </div>
         <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
       </div>
       <div class="mobile-menu">
-        <a href="pricing.html">Product</a>
-        <a class="active" href="docs.html">Docs</a>
+        <a href="products.html">Products</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="resources.html">Resources</a>
         <a href="company.html">Company</a>
-        <a href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
-        <a class="btn ghost" href="demo.html">Request demo</a>
-        <a class="btn primary" href="login.html">Launch console</a>
+        <a href="company/contact.html">Contact</a>
+        <a class="btn ghost" href="signin.html">Sign in</a>
+        <a class="btn primary" href="signup.html">Try for free</a>
       </div>
     </header>
 
     <main>
       <div class="page-shell">
-        <section class="hero">
-          <div class="chip-row">
-            <span class="chip">Docs</span>
-            <span class="chip">API</span>
-            <span class="chip">SQL</span>
-          </div>
-          <h1>Documentation that feels as polished as the platform.</h1>
-          <p>
-            Built in the same spirit as Island Computing Services, the docs keep India-first teams
-            in flow with clear guides for compute islands, managed databases, CI/CD, and AI runtime
-            APIs—all without the noise.
-          </p>
-          <input type="search" placeholder="Search guides, SQL, APIs..." />
-        </section>
-
         <section class="section">
           <div class="section-header">
-            <h2>Quick starts</h2>
-            <p>Walk through the most common workflows end-to-end.</p>
+            <h1>Documentation</h1>
+            <p class="section-intro">Start with the essentials: compute, database, and storage.</p>
           </div>
-          <div class="grid three-col">
+          <div class="grid two-col">
             <div class="card">
-              <p class="badge">10 min</p>
-              <h3>Provision your first island</h3>
-              <p>Launch compute, attach networking, and deploy a sample API.</p>
+              <h3>Getting started</h3>
+              <ul class="list-check">
+                <li>Sign up for ICS and claim free credits.</li>
+                <li>Create your first compute island from the console.</li>
+                <li>Deploy from Git and observe your application.</li>
+              </ul>
             </div>
             <div class="card">
-              <p class="badge">15 min</p>
-              <h3>Ship CI/CD + observability</h3>
-              <p>Connect Git, configure pipelines, and light up dashboards for your services.</p>
+              <h3>Compute</h3>
+              <ul class="list-check">
+                <li>Choose instance profiles and autoscaling policies.</li>
+                <li>Configure networking and environment guardrails.</li>
+                <li>Stream logs, traces, and metrics.</li>
+              </ul>
             </div>
             <div class="card">
-              <p class="badge">20 min</p>
-              <h3>Build an AI workload</h3>
-              <p>Deploy notebooks, attach vector storage, and expose inference endpoints.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Reference library</h2>
-            <p>Everything is organized into predictable collections.</p>
-          </div>
-          <div class="grid four-col">
-            <div class="card">
-              <h3>Compute &amp; networking</h3>
-              <p>Terraform specs, autoscale policies, and service mesh guides.</p>
+              <h3>Database</h3>
+              <ul class="list-check">
+                <li>Create PostgreSQL, MySQL, or MongoDB instances.</li>
+                <li>Backups, point-in-time recovery, and HA.</li>
+                <li>Connect securely from compute islands.</li>
+              </ul>
             </div>
             <div class="card">
-              <h3>API &amp; SDK</h3>
-              <p>REST, CLI, Python, and Go references with samples.</p>
-            </div>
-            <div class="card">
-              <h3>Data &amp; governance</h3>
-              <p>Managed DBs, sovereignty rules, lineage, and masking.</p>
-            </div>
-            <div class="card">
-              <h3>Operations</h3>
-              <p>Monitoring, alerts, on-call, and incident automation.</p>
+              <h3>Storage</h3>
+              <ul class="list-check">
+                <li>Create buckets and select performance tiers.</li>
+                <li>Manage lifecycle policies and access controls.</li>
+                <li>Monitor egress and set alerts.</li>
+              </ul>
             </div>
           </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Release notes</h2>
-            <p>Stay in sync with weekly improvements across India and global regions.</p>
-          </div>
-          <ul class="timeline">
-            <li>
-              <strong>June 18</strong> — Vector search GA across all Scale &amp; Sovereign accounts.
-            </li>
-            <li>
-              <strong>June 10</strong> — Private MPLS peering automation launched for Sovereign plans.
-            </li>
-            <li>
-              <strong>June 1</strong> — New trust center with RBI-ready audit evidence downloads.
-            </li>
-          </ul>
         </section>
       </div>
     </main>
 
     <footer class="footer">
       <div class="footer-shell">
-        <div class="footer-grid">
+        <div class="footer-columns">
           <div>
             <strong>Island Computing Services</strong>
-            <p>Simplifying Computing for India-first, AI-native builders.</p>
+            <p>Simplifying cloud for India-first, AI-native builders.</p>
           </div>
           <div>
-            <p>Product</p>
-            <a href="index.html">Overview</a><br />
-            <a href="pricing.html">Pricing</a><br />
-            <a href="demo.html">Demo</a>
+            <p>Products</p>
+            <a href="products/compute.html">Compute</a><br />
+            <a href="products/database.html">Database</a><br />
+            <a href="products/storage.html">Storage</a>
           </div>
           <div>
             <p>Developers</p>
             <a href="docs.html">Docs</a><br />
-            <a href="support.html">Support</a><br />
-            <a href="blog.html">Changelog</a>
+            <a href="guides.html">Guides</a><br />
+            <a href="pricing.html">Pricing calculator</a><br />
+            <a href="#">API (coming soon)</a>
           </div>
           <div>
             <p>Company</p>
-            <a href="company.html">About</a><br />
-            <a href="support.html">Contact</a>
+            <a href="company/about.html">About</a><br />
+            <a href="company/team.html">Team</a><br />
+            <a href="company/careers.html">Careers</a><br />
+            <a href="company/press.html">Press</a><br />
+            <a href="company/contact.html">Contact</a><br />
+            <a href="company/trust.html">Trust</a>
+          </div>
+          <div>
+            <p>Ecosystem</p>
+            <a href="community.html">Community</a><br />
+            <a href="blog.html">Blog</a><br />
+            <a href="#">LinkedIn</a><br />
+            <a href="#">X</a><br />
+            <a href="#">Discord</a>
           </div>
         </div>
-        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
+        <div class="footer-bottom">
+          <span>© 2024 Island Computing Services.</span>
+          <div class="chip-row">
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="status.html">Status</a>
+          </div>
+        </div>
       </div>
     </footer>
 
     <script>
       const toggle = document.querySelector('.menu-toggle');
       const mobile = document.querySelector('.mobile-menu');
-      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
     </script>
   </body>
 </html>

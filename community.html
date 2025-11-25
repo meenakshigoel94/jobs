@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Request a Demo - ICS</title>
+    <title>ICS Community</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -16,7 +16,7 @@
         <nav class="primary-nav">
           <a href="products.html">Products</a>
           <a href="pricing.html">Pricing</a>
-          <a href="resources.html">Resources</a>
+          <a class="active" href="resources.html">Resources</a>
           <a href="company.html">Company</a>
           <a href="company/contact.html">Contact</a>
         </nav>
@@ -39,47 +39,29 @@
 
     <main>
       <div class="page-shell">
-        <section class="hero">
-          <div class="chip-row">
-            <span class="chip">Live demo</span>
-            <span class="chip">45 minutes</span>
-            <span class="chip">Tailored to your stack</span>
+        <section class="section">
+          <div class="section-header">
+            <h1>Community</h1>
+            <p class="section-intro">Join builders shaping ICS. Choose the space that works best for you.</p>
           </div>
-          <h1>Experience the ICS platform with a guided walkthrough.</h1>
-          <p>We’ll tailor the session to your India-first workloads and connect you with a solutions architect.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#demo-form">Book a demo</a>
-            <a class="btn ghost" href="pricing.html">See pricing</a>
-          </div>
-        </section>
-
-        <section class="section" id="demo-form">
-          <div class="grid two-col">
+          <div class="grid three-col">
             <div class="card">
-              <form class="form-grid">
-                <input type="text" placeholder="Full name" />
-                <input type="email" placeholder="Work email" />
-                <input type="text" placeholder="Company" />
-                <input type="text" placeholder="Job title" />
-                <select>
-                  <option>Workload focus</option>
-                  <option>Compute islands</option>
-                  <option>Managed databases</option>
-                  <option>AI / ML</option>
-                  <option>DevOps &amp; observability</option>
-                </select>
-                <textarea placeholder="What would you like to see?" rows="5"></textarea>
-                <button class="btn primary" type="submit">Book a demo</button>
-              </form>
+              <div class="icon-circle">💬</div>
+              <h3>Discord</h3>
+              <p>Chat with the team, request features, and join office hours.</p>
+              <a class="btn ghost" href="#">Join Discord</a>
             </div>
             <div class="card">
-              <h3>What to expect</h3>
-              <ul class="list-check">
-                <li>Preview of the ICS console and governance center.</li>
-                <li>Pricing and credits overview tuned to your usage.</li>
-                <li>Architecture review with sovereignty best practices.</li>
-                <li>Next steps for pilots, migrations, and onboarding.</li>
-              </ul>
+              <div class="icon-circle">in</div>
+              <h3>LinkedIn</h3>
+              <p>Product launches, hiring updates, and India cloud commentary.</p>
+              <a class="btn ghost" href="#">Follow on LinkedIn</a>
+            </div>
+            <div class="card">
+              <div class="icon-circle">𝕏</div>
+              <h3>X</h3>
+              <p>Shipping logs, tips, and conversations with founders.</p>
+              <a class="btn ghost" href="#">Follow on X</a>
             </div>
           </div>
         </section>
@@ -87,13 +69,13 @@
         <section class="section">
           <div class="cta-band">
             <div>
-              <p class="badge">Prefer to start now?</p>
-              <h3>Launch with free credits today.</h3>
-              <p class="muted">Create an account and deploy compute, database, and storage in minutes.</p>
+              <p class="badge">Stay close</p>
+              <h3>Want to embed ICS with your team?</h3>
+              <p class="muted">Reach out for office hours or to feature your story on the blog.</p>
             </div>
             <div class="actions">
-              <a class="btn primary" href="signup.html">Try for free</a>
-              <a class="btn ghost" href="company/contact.html">Talk to sales</a>
+              <a class="btn primary" href="company/contact.html">Contact us</a>
+              <a class="btn ghost" href="blog.html">Read the blog</a>
             </div>
           </div>
         </section>
@@ -153,7 +135,9 @@
     <script>
       const toggle = document.querySelector('.menu-toggle');
       const mobile = document.querySelector('.mobile-menu');
-      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
     </script>
   </body>
 </html>
