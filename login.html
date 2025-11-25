@@ -3,35 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Island Console Login</title>
+    <title>Sign in - ICS</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
     <header class="global-header">
       <div class="nav-shell">
-        <a class="logo" href="index.html">
+        <a class="logo" href="/index.html">
           <span class="logo-mark">I</span>
-          Island
+          Island Computing Services
         </a>
         <nav class="primary-nav">
-          <a href="pricing.html">Product</a>
-          <a href="docs.html">Docs</a>
-          <a href="company.html">Company</a>
-          <a href="blog.html">Blog</a>
-          <a href="support.html">Support</a>
+          <a href="/products.html">Products</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/resources.html">Resources</a>
+          <a href="/company.html">Company</a>
+          <a href="/company/contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
-          <a class="btn primary" href="login.html">Launch console</a>
+          <a class="link" href="/signin.html">Sign in</a>
+          <a class="btn primary" href="/signup.html">Try for free</a>
         </div>
         <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
       </div>
       <div class="mobile-menu">
-        <a href="pricing.html">Product</a>
-        <a href="docs.html">Docs</a>
-        <a href="company.html">Company</a>
-        <a href="blog.html">Blog</a>
-        <a href="support.html">Support</a>
-        <a class="btn primary" href="login.html">Launch console</a>
+        <a href="/products.html">Products</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/company.html">Company</a>
+        <a href="/company/contact.html">Contact</a>
+        <a class="btn ghost" href="/signin.html">Sign in</a>
+        <a class="btn primary" href="/signup.html">Try for free</a>
       </div>
     </header>
 
@@ -39,17 +41,15 @@
       <div class="page-shell auth-shell">
         <section class="section">
           <div class="auth-card">
+            <span class="pill">Console access</span>
             <h2>Sign in to Island Console</h2>
-            <form class="grid" style="gap:1rem;">
+            <p class="muted">Use your work email to access ICS. New here? Start with free credits.</p>
+            <form class="form-grid">
               <input type="email" placeholder="Work email" />
               <input type="password" placeholder="Password" />
-              <div class="chip-row" style="justify-content:space-between; width:100%;">
-                <label><input type="checkbox" /> Keep me signed in</label>
-                <a href="support.html">Forgot password?</a>
-              </div>
               <button class="btn primary" type="submit">Sign in</button>
-              <a class="btn ghost" href="demo.html">Need an account? Request access</a>
             </form>
+            <p class="muted">Need an account? <a href="/signup.html">Create one here</a>.</p>
           </div>
         </section>
       </div>
@@ -57,28 +57,51 @@
 
     <footer class="footer">
       <div class="footer-shell">
-        <div class="footer-grid">
+        <div class="footer-columns">
           <div>
             <strong>Island Computing Services</strong>
-            <p>Simplifying Computing for India-first, AI-native builders.</p>
+            <p>Simplifying cloud for India-first, AI-native builders.</p>
           </div>
           <div>
-            <p>Product</p>
-            <a href="index.html">Overview</a><br />
-            <a href="pricing.html">Pricing</a>
+            <p>Products</p>
+            <a href="/products/compute.html">Compute</a><br />
+            <a href="/products/database.html">Database</a><br />
+            <a href="/products/storage.html">Storage</a>
           </div>
           <div>
-            <p>Support</p>
-            <a href="support.html">Help center</a><br />
-            <a href="docs.html">Docs</a>
+            <p>Developers</p>
+            <a href="/docs.html">Docs</a><br />
+            <a href="/guides.html">Guides</a><br />
+            <a href="/pricing.html">Pricing calculator</a><br />
+            <a href="#">API (coming soon)</a>
           </div>
           <div>
             <p>Company</p>
-            <a href="company.html">About</a><br />
-            <a href="blog.html">News</a>
+            <a href="/company/about.html">About</a><br />
+            <a href="/company/team.html">Team</a><br />
+            <a href="/company/careers.html">Careers</a><br />
+            <a href="/company/press.html">Press</a><br />
+            <a href="/company/contact.html">Contact</a><br />
+            <a href="/company/trust.html">Trust</a>
+          </div>
+          <div>
+            <p>Ecosystem</p>
+            <a href="/community.html">Community</a><br />
+            <a href="/blog.html">Blog</a><br />
+            <a href="#">LinkedIn</a><br />
+            <a href="#">X</a><br />
+            <a href="#">Discord</a>
           </div>
         </div>
-        <small>© 2024 Island Computing Services. Simplifying Computing.</small>
+        <div class="footer-bottom">
+          <span>© 2024 Island Computing Services.</span>
+          <div class="chip-row">
+            <a href="/terms.html">Terms</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/cookies.html">Cookies</a>
+            <a href="/status.html">Status</a>
+          </div>
+        </div>
       </div>
     </footer>
 
