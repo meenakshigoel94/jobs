@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in - ICS</title>
+    <title>ICS Community</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -16,7 +16,7 @@
         <nav class="primary-nav">
           <a href="/products.html">Products</a>
           <a href="/pricing.html">Pricing</a>
-          <a href="/resources.html">Resources</a>
+          <a class="active" href="/resources.html">Resources</a>
           <a href="/company.html">Company</a>
           <a href="/company/contact.html">Contact</a>
         </nav>
@@ -38,18 +38,45 @@
     </header>
 
     <main>
-      <div class="page-shell auth-shell">
+      <div class="page-shell">
         <section class="section">
-          <div class="auth-card">
-            <span class="pill">Console access</span>
-            <h2>Sign in to Island Console</h2>
-            <p class="muted">Use your work email to access ICS. New here? Start with free credits.</p>
-            <form class="form-grid">
-              <input type="email" placeholder="Work email" />
-              <input type="password" placeholder="Password" />
-              <button class="btn primary" type="submit">Sign in</button>
-            </form>
-            <p class="muted">Need an account? <a href="/signup.html">Create one here</a>.</p>
+          <div class="section-header">
+            <h1>Community</h1>
+            <p class="section-intro">Join builders shaping ICS. Choose the space that works best for you.</p>
+          </div>
+          <div class="grid three-col">
+            <div class="card">
+              <div class="icon-circle">💬</div>
+              <h3>Discord</h3>
+              <p>Chat with the team, request features, and join office hours.</p>
+              <a class="btn ghost" href="#">Join Discord</a>
+            </div>
+            <div class="card">
+              <div class="icon-circle">in</div>
+              <h3>LinkedIn</h3>
+              <p>Product launches, hiring updates, and India cloud commentary.</p>
+              <a class="btn ghost" href="#">Follow on LinkedIn</a>
+            </div>
+            <div class="card">
+              <div class="icon-circle">𝕏</div>
+              <h3>X</h3>
+              <p>Shipping logs, tips, and conversations with founders.</p>
+              <a class="btn ghost" href="#">Follow on X</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-band">
+            <div>
+              <p class="badge">Stay close</p>
+              <h3>Want to embed ICS with your team?</h3>
+              <p class="muted">Reach out for office hours or to feature your story on the blog.</p>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="/company/contact.html">Contact us</a>
+              <a class="btn ghost" href="/blog.html">Read the blog</a>
+            </div>
           </div>
         </section>
       </div>
@@ -108,7 +135,9 @@
     <script>
       const toggle = document.querySelector('.menu-toggle');
       const mobile = document.querySelector('.mobile-menu');
-      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
     </script>
   </body>
 </html>

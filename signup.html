@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in - ICS</title>
+    <title>Sign up - ICS</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -41,15 +41,15 @@
       <div class="page-shell auth-shell">
         <section class="section">
           <div class="auth-card">
-            <span class="pill">Console access</span>
-            <h2>Sign in to Island Console</h2>
-            <p class="muted">Use your work email to access ICS. New here? Start with free credits.</p>
+            <h2>Create your ICS account</h2>
+            <p class="muted">Start building with free credits and transparent pricing.</p>
             <form class="form-grid">
+              <input type="text" placeholder="Full name" />
               <input type="email" placeholder="Work email" />
+              <input type="text" placeholder="Company" />
               <input type="password" placeholder="Password" />
-              <button class="btn primary" type="submit">Sign in</button>
+              <button class="btn primary" type="submit">Create account</button>
             </form>
-            <p class="muted">Need an account? <a href="/signup.html">Create one here</a>.</p>
           </div>
         </section>
       </div>
@@ -108,7 +108,9 @@
     <script>
       const toggle = document.querySelector('.menu-toggle');
       const mobile = document.querySelector('.mobile-menu');
-      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
     </script>
   </body>
 </html>

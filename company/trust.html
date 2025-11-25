@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in - ICS</title>
-    <link rel="stylesheet" href="assets/styles.css" />
+    <title>ICS Trust & Security</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
   </head>
   <body>
     <header class="global-header">
@@ -17,7 +17,7 @@
           <a href="/products.html">Products</a>
           <a href="/pricing.html">Pricing</a>
           <a href="/resources.html">Resources</a>
-          <a href="/company.html">Company</a>
+          <a class="active" href="/company.html">Company</a>
           <a href="/company/contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
@@ -38,18 +38,29 @@
     </header>
 
     <main>
-      <div class="page-shell auth-shell">
+      <div class="page-shell">
         <section class="section">
-          <div class="auth-card">
-            <span class="pill">Console access</span>
-            <h2>Sign in to Island Console</h2>
-            <p class="muted">Use your work email to access ICS. New here? Start with free credits.</p>
-            <form class="form-grid">
-              <input type="email" placeholder="Work email" />
-              <input type="password" placeholder="Password" />
-              <button class="btn primary" type="submit">Sign in</button>
-            </form>
-            <p class="muted">Need an account? <a href="/signup.html">Create one here</a>.</p>
+          <div class="section-header">
+            <h1>Trust & security</h1>
+            <p class="section-intro">Data residency, security posture, and compliance roadmap.</p>
+          </div>
+          <div class="grid three-col">
+            <div class="card">
+              <h3>Data residency</h3>
+              <p>ICS regions are based in India with in-country support and future DR options for nearby markets.</p>
+            </div>
+            <div class="card">
+              <h3>Security posture</h3>
+              <ul class="list-check">
+                <li>Encryption in transit and at rest</li>
+                <li>Private networking by default</li>
+                <li>SSO and role-based access controls</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Compliance roadmap</h3>
+              <p>Working toward SOC 2, ISO 27001, and sector-specific controls for fintech and health.</p>
+            </div>
           </div>
         </section>
       </div>
@@ -108,7 +119,9 @@
     <script>
       const toggle = document.querySelector('.menu-toggle');
       const mobile = document.querySelector('.mobile-menu');
-      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
     </script>
   </body>
 </html>

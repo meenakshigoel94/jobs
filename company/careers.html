@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in - ICS</title>
-    <link rel="stylesheet" href="assets/styles.css" />
+    <title>Careers at ICS</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
   </head>
   <body>
     <header class="global-header">
@@ -17,7 +17,7 @@
           <a href="/products.html">Products</a>
           <a href="/pricing.html">Pricing</a>
           <a href="/resources.html">Resources</a>
-          <a href="/company.html">Company</a>
+          <a class="active" href="/company.html">Company</a>
           <a href="/company/contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
@@ -38,18 +38,34 @@
     </header>
 
     <main>
-      <div class="page-shell auth-shell">
+      <div class="page-shell">
         <section class="section">
-          <div class="auth-card">
-            <span class="pill">Console access</span>
-            <h2>Sign in to Island Console</h2>
-            <p class="muted">Use your work email to access ICS. New here? Start with free credits.</p>
-            <form class="form-grid">
-              <input type="email" placeholder="Work email" />
-              <input type="password" placeholder="Password" />
-              <button class="btn primary" type="submit">Sign in</button>
-            </form>
-            <p class="muted">Need an account? <a href="/signup.html">Create one here</a>.</p>
+          <div class="section-header">
+            <h1>Careers</h1>
+            <p class="section-intro">Join us to build a modern, India-first cloud for developers.</p>
+          </div>
+          <div class="grid two-col">
+            <div class="card">
+              <p class="badge">Engineering</p>
+              <h3>Platform Engineer</h3>
+              <p>Build the control plane powering compute islands and networking.</p>
+              <p class="muted">Bengaluru · Full-time</p>
+              <a class="btn ghost" href="mailto:careers@ics.cloud?subject=Platform%20Engineer">Apply</a>
+            </div>
+            <div class="card">
+              <p class="badge">Product</p>
+              <h3>Product Manager, Developer Experience</h3>
+              <p>Shape the console, docs, and workflows that developers touch daily.</p>
+              <p class="muted">Remote India · Full-time</p>
+              <a class="btn ghost" href="mailto:careers@ics.cloud?subject=Product%20Manager">Apply</a>
+            </div>
+            <div class="card">
+              <p class="badge">Go To Market</p>
+              <h3>Solutions Engineer</h3>
+              <p>Guide customers through architecture decisions and migrations.</p>
+              <p class="muted">Bengaluru · Full-time</p>
+              <a class="btn ghost" href="mailto:careers@ics.cloud?subject=Solutions%20Engineer">Apply</a>
+            </div>
           </div>
         </section>
       </div>
@@ -108,7 +124,9 @@
     <script>
       const toggle = document.querySelector('.menu-toggle');
       const mobile = document.querySelector('.mobile-menu');
-      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
     </script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in - ICS</title>
+    <title>ICS Guides</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -16,7 +16,7 @@
         <nav class="primary-nav">
           <a href="/products.html">Products</a>
           <a href="/pricing.html">Pricing</a>
-          <a href="/resources.html">Resources</a>
+          <a class="active" href="/resources.html">Resources</a>
           <a href="/company.html">Company</a>
           <a href="/company/contact.html">Contact</a>
         </nav>
@@ -38,18 +38,53 @@
     </header>
 
     <main>
-      <div class="page-shell auth-shell">
+      <div class="page-shell">
         <section class="section">
-          <div class="auth-card">
-            <span class="pill">Console access</span>
-            <h2>Sign in to Island Console</h2>
-            <p class="muted">Use your work email to access ICS. New here? Start with free credits.</p>
-            <form class="form-grid">
-              <input type="email" placeholder="Work email" />
-              <input type="password" placeholder="Password" />
-              <button class="btn primary" type="submit">Sign in</button>
-            </form>
-            <p class="muted">Need an account? <a href="/signup.html">Create one here</a>.</p>
+          <div class="section-header">
+            <h1>Guides</h1>
+            <p class="section-intro">Step-by-step playbooks to run ICS in production.</p>
+          </div>
+          <div class="grid two-col">
+            <div class="card">
+              <p class="badge">Migration</p>
+              <h3>Migrate from hyperscalers</h3>
+              <p>Plan your move, map services, and verify costs before cutover.</p>
+              <ul class="list-check">
+                <li>Inventory your workloads</li>
+                <li>Match ICS services to existing dependencies</li>
+                <li>Test and monitor during cutover</li>
+              </ul>
+            </div>
+            <div class="card">
+              <p class="badge">Environments</p>
+              <h3>Set up dev, stage, and prod islands</h3>
+              <p>Apply consistent policies while keeping environments isolated.</p>
+              <ul class="list-check">
+                <li>Create templates per environment</li>
+                <li>Wire CI/CD to each island</li>
+                <li>Use spend guardrails and alerts</li>
+              </ul>
+            </div>
+            <div class="card">
+              <p class="badge">AI</p>
+              <h3>Run AI workloads on ICS</h3>
+              <p>Use GPU-enabled compute profiles and managed vector stores.</p>
+              <ul class="list-check">
+                <li>Select the right GPU profile</li>
+                <li>Attach managed databases for embeddings</li>
+                <li>Monitor inference cost and latency</li>
+              </ul>
+            </div>
+            <div class="card">
+              <p class="badge">Security</p>
+              <h3>Secure by default</h3>
+              <p>Leverage ICS policies for identity, networking, and secrets.</p>
+              <ul class="list-check">
+                <li>Private networking between services</li>
+                <li>Short-lived credentials and rotation</li>
+                <li>Compliance roadmap for India-first teams</li>
+              </ul>
+            </div>
           </div>
         </section>
       </div>
@@ -108,7 +143,9 @@
     <script>
       const toggle = document.querySelector('.menu-toggle');
       const mobile = document.querySelector('.mobile-menu');
-      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
     </script>
   </body>
 </html>

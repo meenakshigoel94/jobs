@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About ICS</title>
-    <link rel="stylesheet" href="assets/styles.css" />
+    <title>ICS Database</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
   </head>
   <body>
     <header class="global-header">
@@ -14,10 +14,10 @@
           Island Computing Services
         </a>
         <nav class="primary-nav">
-          <a href="/products.html">Products</a>
+          <a class="active" href="/products.html">Products</a>
           <a href="/pricing.html">Pricing</a>
           <a href="/resources.html">Resources</a>
-          <a class="active" href="/company.html">Company</a>
+          <a href="/company.html">Company</a>
           <a href="/company/contact.html">Contact</a>
         </nav>
         <div class="nav-cta">
@@ -40,47 +40,78 @@
     <main>
       <div class="page-shell">
         <section class="section">
+          <span class="pill">Database</span>
           <div class="section-header">
-            <h1>Company</h1>
-            <p class="section-intro">Our mission is to simplify cloud for builders in India and beyond.</p>
+            <h1>Managed databases with HA, backups, and scaling built in.</h1>
+            <div class="hero-actions">
+              <a class="btn primary" href="/signup.html">Create a database</a>
+              <a class="btn ghost" href="/pricing.html#database">View pricing</a>
+            </div>
+          </div>
+          <p class="section-intro">
+            Postgres, MySQL, and MongoDB deployments with automated backups, encryption, and health checks.
+            Connect securely from your compute islands without managing patching or failover yourself.
+          </p>
+        </section>
+
+        <section class="section grid two-col">
+          <div class="card">
+            <h3>Supported engines</h3>
+            <ul class="list-check">
+              <li>PostgreSQL 14 and 15 with extensions approved for production.</li>
+              <li>MySQL 8 with automated minor version upgrades.</li>
+              <li>MongoDB 6 with replica-set high availability.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Data safety</h3>
+            <ul class="list-check">
+              <li>Daily snapshots plus point-in-time recovery.</li>
+              <li>HA replicas with automatic failover and health monitoring.</li>
+              <li>Encryption at rest and in transit with managed certificates.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Scaling and connectivity</h2>
+            <p class="section-intro">
+              Scale vertically in minutes or horizontally with read replicas. Secure connectivity keeps
+              databases close to your compute islands.
+            </p>
           </div>
           <div class="grid two-col">
             <div class="card">
-              <h3>Mission & vision</h3>
-              <p>Make cloud boring for builders by pairing opinionated products with transparent pricing.</p>
-              <p class="muted">Born in India, designed for global-scale workloads.</p>
+              <h3>Scaling</h3>
+              <ul class="list-check">
+                <li>Resize CPU, RAM, and storage without data loss.</li>
+                <li>Add replicas for reads or analytics workloads.</li>
+                <li>Usage guardrails with budget alerts.</li>
+              </ul>
             </div>
             <div class="card">
-              <h3>ICS story</h3>
-              <p>Founded by cloud operators who wanted faster, clearer infrastructure for modern teams.</p>
-              <p class="muted">We obsess over reducing friction from setup to scale.</p>
+              <h3>Connections</h3>
+              <ul class="list-check">
+                <li>Private networking to ICS compute by default.</li>
+                <li>Connection pooling and IP allowlists for external access.</li>
+                <li>Managed secrets to keep credentials rotated.</li>
+              </ul>
             </div>
           </div>
         </section>
 
         <section class="section">
-          <h2>Milestones</h2>
-          <ul class="timeline">
-            <li>
-              <strong>2023</strong> — ICS founded in Bengaluru with a focus on sovereign, developer-first cloud.
-            </li>
-            <li><strong>2024</strong> — Beta launch of compute islands, managed databases, and storage.</li>
-            <li><strong>2025</strong> — Expanding regions and compliance for regulated industries.</li>
-          </ul>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <h2>Explore more</h2>
-            <p class="section-intro">Learn about our team, careers, press, and trust posture.</p>
-          </div>
-          <div class="grid four-col">
-            <a class="card" href="/company/about.html">About ICS</a>
-            <a class="card" href="/company/team.html">Team</a>
-            <a class="card" href="/company/careers.html">Careers</a>
-            <a class="card" href="/company/press.html">Press</a>
-            <a class="card" href="/company/trust.html">Trust</a>
-            <a class="card" href="/company/contact.html">Contact</a>
+          <div class="cta-band">
+            <div>
+              <p class="badge">Database</p>
+              <h3>Ship data workloads without managing infrastructure.</h3>
+              <p class="muted">Use free credits to spin up a managed database or talk with us about migrations.</p>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="/signup.html">Try for free</a>
+              <a class="btn ghost" href="/company/contact.html">Request a demo</a>
+            </div>
           </div>
         </section>
       </div>

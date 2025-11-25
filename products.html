@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in - ICS</title>
+    <title>ICS Products</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -14,7 +14,7 @@
           Island Computing Services
         </a>
         <nav class="primary-nav">
-          <a href="/products.html">Products</a>
+          <a class="active" href="/products.html">Products</a>
           <a href="/pricing.html">Pricing</a>
           <a href="/resources.html">Resources</a>
           <a href="/company.html">Company</a>
@@ -38,18 +38,73 @@
     </header>
 
     <main>
-      <div class="page-shell auth-shell">
+      <div class="page-shell">
         <section class="section">
-          <div class="auth-card">
-            <span class="pill">Console access</span>
-            <h2>Sign in to Island Console</h2>
-            <p class="muted">Use your work email to access ICS. New here? Start with free credits.</p>
-            <form class="form-grid">
-              <input type="email" placeholder="Work email" />
-              <input type="password" placeholder="Password" />
-              <button class="btn primary" type="submit">Sign in</button>
-            </form>
-            <p class="muted">Need an account? <a href="/signup.html">Create one here</a>.</p>
+          <div class="section-header">
+            <h1>Products</h1>
+            <div class="hero-actions">
+              <a class="btn ghost" href="/company/contact.html">Talk to us about your architecture</a>
+            </div>
+          </div>
+          <p class="section-intro">
+            ICS products are intentionally few and deep—compute, database, and storage—so you can assemble a
+            reliable stack without juggling dozens of services.
+          </p>
+        </section>
+
+        <section class="section grid three-col">
+          <div class="card">
+            <h3>Compute</h3>
+            <p>Elastic compute islands with networking, autoscaling, and security included.</p>
+            <ul class="list-check">
+              <li>Profiles tuned for APIs, workers, and inference</li>
+              <li>Private networking and per-second billing</li>
+              <li>Starts at ₹1.8/hr — see pricing</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn primary" href="/products/compute.html">View details</a>
+              <a class="btn ghost" href="/pricing.html#compute">See pricing</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Database</h3>
+            <p>Managed PostgreSQL, MySQL, and MongoDB with backups and HA built in.</p>
+            <ul class="list-check">
+              <li>Daily backups with point-in-time restores</li>
+              <li>Scale vertically or horizontally with minimal downtime</li>
+              <li>Starts at ₹2.5/hr — see pricing</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn primary" href="/products/database.html">View details</a>
+              <a class="btn ghost" href="/pricing.html#database">See pricing</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Storage</h3>
+            <p>Durable block and object storage with redundancy and cost-efficient tiers.</p>
+            <ul class="list-check">
+              <li>11x9s durability with multi-AZ replication</li>
+              <li>Performance and archive tiers for every workload</li>
+              <li>Starts at ₹2.4/GB — see pricing</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn primary" href="/products/storage.html">View details</a>
+              <a class="btn ghost" href="/pricing.html#storage">See pricing</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-band">
+            <div>
+              <p class="badge">Launch faster</p>
+              <h3>Ready to simplify your cloud?</h3>
+              <p class="muted">Start with free credits or let us architect your stack with ICS best practices.</p>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="/signup.html">Try for free</a>
+              <a class="btn ghost" href="/company/contact.html">Request a demo</a>
+            </div>
           </div>
         </section>
       </div>
@@ -108,7 +163,9 @@
     <script>
       const toggle = document.querySelector('.menu-toggle');
       const mobile = document.querySelector('.mobile-menu');
-      toggle?.addEventListener('click', () => mobile?.classList.toggle('open'));
+      toggle?.addEventListener('click', () => {
+        mobile?.classList.toggle('open');
+      });
     </script>
   </body>
 </html>
